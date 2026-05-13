@@ -1,0 +1,6 @@
+# Photos des cartes SD (uploadées séparément sur Cloudflare R2)
+images/carte_*/
+
+# Système
+.DS_Store
+Thumbs.db

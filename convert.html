@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>GÉNÉRATEUR JSON // PROJET_SD</title>
+    <style>
+        body { background: #000; color: #ff0000; font-family: 'Courier New', monospace; padding: 40px; font-size: 14px;}
+        h1 { text-transform: uppercase; font-weight: 800; letter-spacing: -0.02em; }
+        p { color: #fff; }
+        textarea { width: 100%; height: 250px; background: #111; color: #fff; border: 1px solid #ff0000; padding: 15px; margin-bottom: 20px; font-family: 'Courier New', monospace; }
+        button { background: #ff0000; color: #000; border: 1px solid #ff0000; padding: 15px 30px; cursor: pointer; font-weight: 900; text-transform: uppercase; letter-spacing: 0.05em; transition: 0.2s; }
+        button:hover { background: #000; color: #ff0000; }
+        #outputJson { height: 400px; color: #ff0000; border-color: #fff; }
+    </style>
+</head>
+<body>
+    <h1>[ CONVERTISSEUR DE DONNÉES BRUTES ]</h1>
+    <p>1. Colle ton bloc de texte brut (avec les listes de DSCF et FUJI) ci-dessous :</p>
+    
+    <textarea id="inputRaw"></textarea>
+    <button onclick="generateJSON()">EXÉCUTER L'EXTRACTION</button>
+    
+    <p>2. Copie le résultat final et colle-le dans ton fichier data_carte_05.json :</p>
+    <textarea id="outputJson" readonly></textarea>
+
+    <script>
+        function generateJSON() {
+            const raw = document.getElementById('inputRaw').value;
+            const lines = raw.split('\n').map(l => l.trim()).filter(l => l);
+            let jsonArr = [];
+            
+            // Chemins par défaut
+            let currentFolder = "CARTE_005 // DCIM"; 
+            let currentPath = "images/carte_05/DSCF/";
+
+            // Expression régulière chirurgicale pour découper : Fichier | Tags | Date | Reste
+            const regex = /(.+?\.(?:JPG|jpg|AVI|avi|m4a|mp4))(.*?)(20\d{2}-\d{2}-\d{2})?(.*)/;
+
+            for(let line of lines) {
+                // Détection des dossiers pour changer le chemin en temps réel
+                if(line === "carte_05/DSCF") {
+                    currentFolder = "CARTE_005 // DCIM";
+                    currentPath = "images/carte_05/DSCF/";
+                    continue;
+                }
+                if(line === "carte_05/FUJIFILM") {
+                    currentFolder = "CARTE_005 // FUJIFILM";
+                    currentPath = "images/carte_05/FUJIFILM/";
+                    continue;
+                }
+                if(line.startsWith("carte_")) continue;
+
+                let match = line.match(regex);
+                if(match) {
+                    let fichier = match[1];
+                    let tags = match[2];
+                    let date = match[3] || "Non définie";
+                    let reste = match[4];
+
+                    let ville = "";
+                    let lieu = "";
+
+                    // Séparation Lieu / Ville basée sur les pays de ta liste
+                    if(reste) {
+                        if(reste.includes("Italie")) {
+                            let parts = reste.split("Italie");
+                            ville = parts[0] + "Italie";
+                            lieu = parts[1] ? parts[1].trim() : "";
+                        } else if (reste.includes("France")) {
+                            let parts = reste.split("France");
+                            ville = parts[0] + "France";
+                            lieu = parts[1] ? parts[1].trim() : "";
+                        } else {
+                            ville = reste.trim(); 
+                        }
+                    }
+
+                    // Formatage de l'objet
+                    let obj = {
+                        url: currentPath + fichier, // LE CORRECTIF DU CHEMIN EST LÀ
+                        fichier: fichier,
+                        tags: tags ? tags : undefined,
+                        date: date,
+                        ville: ville ? ville : undefined,
+                        lieu: lieu ? lieu : undefined,
+                        dossier: currentFolder
+                    };
+
+                    // Nettoyage des lignes vides pour un JSON parfait
+                    Object.keys(obj).forEach(key => obj[key] === undefined && delete obj[key]);
+
+                    jsonArr.push(obj);
+                }
+            }
+            
+            // Affichage dans la boîte du bas
+            document.getElementById('outputJson').value = JSON.stringify(jsonArr, null, 2);
+        }
+    </script>
+</body>
+</html>

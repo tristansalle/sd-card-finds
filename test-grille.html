@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Grille Apparente</title>
+    <style>
+        /* BASE BRUTALISTE */
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #ffffff;
+            color: #000000;
+        }
+
+        /* LE SECRET EST ICI : La même grille pour le menu ET le contenu */
+        .grille-stricte {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 colonnes de taille égale */
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            border-bottom: 1px solid #000;
+            position: sticky;
+            top: 0;
+            background: #fff;
+            z-index: 10;
+        }
+        .nav-item {
+            padding: 15px 20px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-right: 1px solid #000;
+            cursor: pointer;
+        }
+        .nav-item:hover { background: #000; color: #fff; }
+        .nav-item:last-child { border-right: none; } /* Enlève la bordure tout à droite */
+
+        /* --- CONTENU --- */
+        .photo-card {
+            aspect-ratio: 3 / 4; /* Force un format portrait */
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background: #fafafa;
+        }
+        .photo-card:nth-child(4n) {
+            border-right: none; /* Enlève la bordure toutes les 4 colonnes pour le bord de l'écran */
+        }
+
+        .photo-meta {
+            font-family: 'Courier New', monospace;
+            font-size: 10px;
+            font-weight: bold;
+            border-top: 1px solid #000;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="grille-stricte">
+        <div class="nav-item">Index (450)</div>
+        <div class="nav-item">Chronologie</div>
+        <div class="nav-item">Localisation</div>
+        <div class="nav-item">Extraction</div>
+    </nav>
+
+    <main class="grille-stricte">
+        <div class="photo-card"><div class="photo-meta">IMG_001.JPG</div></div>
+        <div class="photo-card"><div class="photo-meta">IMG_002.JPG</div></div>
+        <div class="photo-card"><div class="photo-meta">IMG_003.JPG</div></div>
+        <div class="photo-card"><div class="photo-meta">IMG_004.JPG</div></div>
+        <div class="photo-card"><div class="photo-meta">IMG_005.JPG</div></div>
+        <div class="photo-card"><div class="photo-meta">IMG_006.JPG</div></div>
+        <div class="photo-card"><div class="photo-meta">IMG_007.JPG</div></div>
+        <div class="photo-card"><div class="photo-meta">IMG_008.JPG</div></div>
+    </main>
+
+</body>
+</html>

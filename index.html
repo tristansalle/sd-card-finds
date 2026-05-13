@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHIVE // CARTES SD</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loading-screen">
+        <div class="loading-title">Archive</div>
+        <div class="loading-status">[ Analyse des volumes en cours... ]</div>
+    </div>
+
+    <nav>
+        <button class="nav-btn active-nav" onclick="showView('index', this)">Cartes SD</button>
+        <button class="nav-btn" onclick="showView('tags', this)">Mots-clés</button>
+        <button class="nav-btn" onclick="showView('carte', this)">Localisations</button>
+        <button class="nav-btn" onclick="showView('timeline', this)">Chronologie</button>
+        <button class="nav-btn" onclick="showView('random', this)">Extraction</button>
+        <div class="global-stats-wrapper" id="global-stats-wrapper">
+            <div class="global-stats">
+                <span id="stat-total"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- VUE : INDEX / EXPLORATEUR -->
+    <section id="index" class="view-section active">
+        <div class="explorer-layout">
+            <aside class="explorer-sidebar" id="sidebar-volumes"></aside>
+            
+            <main class="explorer-main">
+                <div class="breadcrumb-bar">
+                    <span id="breadcrumb">[ EN ATTENTE DE SÉLECTION DU VOLUME ]</span>
+                    <div class="pagination-controls" id="pagination-controls" style="display:none;">
+                        <button class="page-btn" id="btn-prev">←</button>
+                        <span id="page-info">1 / 1</span>
+                        <button class="page-btn" id="btn-next">→</button>
+                    </div>
+                </div>
+
+                <div id="sd-content-grid" class="desktop-grid"></div>
+            </main>
+        </div>
+    </section>
+
+    <!-- VUE : MOTS-CLÉS -->
+    <section id="tags" class="view-section">
+        <div id="tags-panel">
+            <div id="tags-validate-bar">
+                <span id="tags-selection-info">// AUCUN MOT-CLÉ SÉLECTIONNÉ</span>
+                <button id="tags-deselect-btn" onclick="deselectAllTags()" disabled>[ EFFACER ]</button>
+                <button id="tags-validate-btn" onclick="validateTagSelection()" disabled>[ VALIDER ]</button>
+            </div>
+            <div class="tags-cloud" id="tags-cloud"></div>
+        </div>
+        <div id="tags-results-panel">
+            <div class="breadcrumb-bar" id="tags-results-bar">
+                <span id="tags-results-breadcrumb"></span>
+                <button class="page-btn" id="tags-back-btn" onclick="closeTagResults()">← RETOUR</button>
+            </div>
+            <div id="tags-results"></div>
+        </div>
+    </section>
+
+    <!-- VUE : CARTE -->
+    <section id="carte" class="view-section">
+        <div id="map-container"></div>
+        <div id="map-gallery-panel">
+            <div class="breadcrumb-bar">
+                <span id="map-gallery-title"></span>
+                <button class="page-btn" onclick="closeMapGallery()">× FERMER</button>
+            </div>
+            <div id="map-gallery-grid"></div>
+        </div>
+    </section>
+
+    <!-- VUE : CHRONOLOGIE -->
+    <section id="timeline" class="view-section">
+        <div id="timeline-container"></div>
+    </section>
+
+    <!-- VUE : EXTRACTION ALÉATOIRE -->
+    <section id="random" class="view-section">
+        <div class="random-source-bar">
+            <span class="data-label">// SOURCE</span>
+            <div id="random-card-selector" class="random-card-selector"></div>
+        </div>
+        <div class="random-showcase">
+            <div class="random-media-wrapper" id="random-media"></div>
+            <div class="random-meta-box">
+                <div>
+                    <div class="data-label" style="margin-bottom: 12px;">// EXTRACTION ALÉATOIRE</div>
+                    <div id="random-meta-content" class="random-meta-content"></div>
+                </div>
+                <button class="random-action-btn" onclick="extractRandom()">[ NOUVELLE EXTRACTION ]</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- VUE : CONTEXTE -->
+    <section id="contexte" class="view-section">
+        <div class="contexte-content">
+            <p class="manifesto">
+                Ce projet est une archive numérique brute, une tentative de cartographier des fragments de mémoire contenus dans des supports physiques obsolètes. 
+                À travers l'exploration de quatorze cartes SD, ce site expose la sédimentation des données : photos oubliées, vidéos corrompues et métadonnées cliniques.
+            </p>
+            <div class="contexte-grid">
+                <div class="contexte-column">
+                    <h3>L'Archive comme objet</h3>
+                    <p>Chaque carte SD est traitée comme un volume archéologique. La structure du site, inspirée du design suisse et des systèmes de fichiers primitifs, refuse l'esthétique du "flux" moderne pour privilégier la rigidité du stock et de la donnée brute.</p>
+                </div>
+                <div class="contexte-column">
+                    <h3>Système de données</h3>
+                    <p>Les images ne sont pas présentées pour leur esthétique seule, mais comme des fichiers (Format, Poids, Date, GPS). L'utilisation de typographies à chasse fixe souligne la nature informatique et fragile de ces souvenirs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" onclick="if(event.target===this) closeLightbox(event)">
+        <button class="close-lightbox" onclick="closeLightbox(event)">×</button>
+        <img id="lightbox-image" class="lightbox-img" src="" alt="">
+        <video id="lightbox-video" class="lightbox-img" controls></video>
+        <div id="lightbox-audio-container" class="lightbox-audio-container">
+            <div style="font-size: 64px; margin-bottom: 20px;">♪</div>
+            <audio id="lightbox-audio" controls></audio>
+        </div>
+        <div id="lightbox-metadata" class="lightbox-meta"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
