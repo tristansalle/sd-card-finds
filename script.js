@@ -1,6 +1,7 @@
 // ==========================================
 // 1. VARIABLES GLOBALES
 // ==========================================
+const IMAGE_BASE = 'https://pub-90d2ba705c554d0995cf2293efe23291.r2.dev';
 let allPhotos = [];
 let filteredPhotos = [];
 let currentPage = 1;
@@ -34,7 +35,7 @@ async function loadData() {
             const [carte, subfolder] = p.dossier.split(' // ');
             if (carte && subfolder) {
                 const carteNum = String(parseInt(carte.replace('CARTE_', ''), 10)).padStart(2, '0');
-                p.url = `images/carte_${carteNum}/${subfolder}/${p.fichier}`;
+                p.url = `${IMAGE_BASE}/images/carte_${carteNum}/${subfolder}/${p.fichier}`;
             }
         }
         return p;
