@@ -31,7 +31,7 @@ async function loadData() {
     
     // Reconstruire les URLs à partir de dossier + fichier
     allPhotos = allPhotos.map(p => {
-        if (!p.url && p.dossier && p.fichier) {
+        if (p.dossier && p.fichier) {
             const [carte, subfolder] = p.dossier.split(' // ');
             if (carte && subfolder) {
                 const carteNum = String(parseInt(carte.replace('CARTE_', ''), 10)).padStart(2, '0');
