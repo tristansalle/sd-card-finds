@@ -4,3 +4,10 @@ images/carte_*/
 # Système
 .DS_Store
 Thumbs.db
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
