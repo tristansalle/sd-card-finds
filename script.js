@@ -371,6 +371,7 @@ function updateTagCounts() {
         document.querySelectorAll('.tag-item').forEach(btn => {
             const span = btn.querySelector('.tag-count');
             if (span) span.textContent = `(${tagCountBase[btn.dataset.tag] || 0})`;
+            btn.classList.remove('tag-zero');
         });
         return;
     }
@@ -389,6 +390,7 @@ function updateTagCounts() {
             return tags.includes(tag);
         }).length;
         span.textContent = `(${count})`;
+        btn.classList.toggle('tag-zero', count === 0);
     });
 }
 
