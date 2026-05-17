@@ -268,7 +268,8 @@ nav {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     align-items: start;
-    gap: var(--space-4) var(--space-3);
+    column-gap: var(--space-3);
+    row-gap: 0;
     overflow-y: auto;
     overflow-x: hidden;
     min-height: 0;
