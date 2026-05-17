@@ -266,7 +266,7 @@ nav {
 .tags-cloud {
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     align-items: start;
     gap: var(--space-4) var(--space-3);
     overflow-y: auto;
