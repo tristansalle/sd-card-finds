@@ -323,37 +323,33 @@ function displayTags() {
     tagCountBase = { ...tagCount };
 
     const categorized = new Set(Object.values(TAG_CATEGORIES).flat());
-    const allCats = { ...TAG_CATEGORIES };
-    const uncategorized = Object.keys(tagCount).filter(t => !categorized.has(t)).sort((a, b) => a.localeCompare(b));
-    if (uncategorized.length) allCats['Autres'] = uncategorized;
-
     const frag = document.createDocumentFragment();
-    let col = 1;
 
-    Object.entries(allCats).forEach(([category, categoryTags]) => {
-        const present = categoryTags.filter(t => tagCount[t]).sort((a, b) => a.localeCompare(b));
-        if (!present.length) return;
-
+    const makeBlock = (categoryName, tagList) => {
+        const block = document.createElement('div');
+        block.className = 'tag-category-block';
         const title = document.createElement('div');
         title.className = 'tag-category-name';
-        title.textContent = category.toUpperCase();
-        title.style.gridColumn = col;
-        title.style.gridRow = 1;
-        frag.appendChild(title);
-
-        present.forEach((tag, i) => {
+        title.textContent = categoryName.toUpperCase();
+        block.appendChild(title);
+        tagList.forEach(tag => {
             const btn = document.createElement('button');
             btn.className = 'tag-item';
             btn.dataset.tag = tag;
             btn.innerHTML = `${tag}<span class="tag-count">(${tagCount[tag]})</span>`;
             btn.onclick = () => toggleTag(tag, btn);
-            btn.style.gridColumn = col;
-            btn.style.gridRow = i + 2;
-            frag.appendChild(btn);
+            block.appendChild(btn);
         });
+        return block;
+    };
 
-        col++;
+    Object.entries(TAG_CATEGORIES).forEach(([category, categoryTags]) => {
+        const present = categoryTags.filter(t => tagCount[t]).sort((a, b) => a.localeCompare(b));
+        if (present.length) frag.appendChild(makeBlock(category, present));
     });
+
+    const uncategorized = Object.keys(tagCount).filter(t => !categorized.has(t)).sort((a, b) => a.localeCompare(b));
+    if (uncategorized.length) frag.appendChild(makeBlock('Autres', uncategorized));
 
     cloud.appendChild(frag);
 }
