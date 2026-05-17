@@ -268,11 +268,11 @@ nav {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     align-items: start;
-    gap: var(--space-4) var(--space-3);
+    gap: var(--space-4) var(--space-1);
     overflow-y: auto;
     overflow-x: hidden;
     min-height: 0;
-    padding: var(--space-3);
+    padding: var(--space-2);
 }
 .tags-cloud::-webkit-scrollbar { width: 3px; }
 .tags-cloud::-webkit-scrollbar-thumb { background: var(--line); }
