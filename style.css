@@ -268,8 +268,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     align-items: start;
-    column-gap: var(--space-3);
-    row-gap: 0;
+    gap: var(--space-4) var(--space-3);
     overflow-y: auto;
     overflow-x: hidden;
     min-height: 0;
@@ -306,7 +305,7 @@ nav {
 .tag-item:hover { color: var(--accent); }
 .tag-item.active-tag { color: var(--accent); }
 .tag-item.tag-zero { opacity: 0.25; pointer-events: none; }
-.tag-item .tag-count { opacity: 0.4; font-size: 10px; margin-left: 4px; font-weight: normal; }
+.tag-item .tag-count { opacity: 0.4; font-size: 10px; margin-left: 4px; font-weight: normal; white-space: nowrap; }
 
 #tags-validate-bar {
     height: var(--breadcrumb-height);
