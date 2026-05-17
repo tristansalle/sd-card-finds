@@ -9,6 +9,7 @@ const ITEMS_PER_PAGE = 20;
 
 let selectedCards = new Set();
 let selectedTags = new Set();
+let tagCountBase = {};
 let randomInitialized = false;
 let timelineYears = [];
 let timelineYearIndex = -1;
@@ -319,6 +320,7 @@ function displayTags() {
             if (tag) tagCount[tag] = (tagCount[tag] || 0) + 1;
         });
     });
+    tagCountBase = { ...tagCount };
 
     const categorized = new Set(Object.values(TAG_CATEGORIES).flat());
     const frag = document.createDocumentFragment();
@@ -333,6 +335,7 @@ function displayTags() {
         tagList.forEach(tag => {
             const btn = document.createElement('button');
             btn.className = 'tag-item';
+            btn.dataset.tag = tag;
             btn.innerHTML = `${tag}<span class="tag-count">(${tagCount[tag]})</span>`;
             btn.onclick = () => toggleTag(tag, btn);
             block.appendChild(btn);
@@ -360,6 +363,33 @@ function toggleTag(tag, btn) {
         btn.classList.add('active-tag');
     }
     updateTagsValidateBar();
+    updateTagCounts();
+}
+
+function updateTagCounts() {
+    if (selectedTags.size === 0) {
+        document.querySelectorAll('.tag-item').forEach(btn => {
+            const span = btn.querySelector('.tag-count');
+            if (span) span.textContent = `(${tagCountBase[btn.dataset.tag] || 0})`;
+        });
+        return;
+    }
+
+    const baseFiltered = allPhotos.filter(p => {
+        const tags = typeof p.tags === 'string' ? p.tags.split(',').map(t => t.trim()) : (p.tags || []);
+        return [...selectedTags].every(t => tags.includes(t));
+    });
+
+    document.querySelectorAll('.tag-item:not(.active-tag)').forEach(btn => {
+        const tag = btn.dataset.tag;
+        const span = btn.querySelector('.tag-count');
+        if (!span) return;
+        const count = baseFiltered.filter(p => {
+            const tags = typeof p.tags === 'string' ? p.tags.split(',').map(t => t.trim()) : (p.tags || []);
+            return tags.includes(tag);
+        }).length;
+        span.textContent = `(${count})`;
+    });
 }
 
 function updateTagsValidateBar() {
@@ -386,6 +416,7 @@ function deselectAllTags() {
     selectedTags.clear();
     document.querySelectorAll('.tag-item.active-tag').forEach(b => b.classList.remove('active-tag'));
     updateTagsValidateBar();
+    updateTagCounts();
 }
 
 function validateTagSelection() {
