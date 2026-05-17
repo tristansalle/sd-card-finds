@@ -714,61 +714,8 @@ function searchInGeoDB(lieu, ville) {
     return null;
 }
 
-// Geocoder un lieu avec priorité au dictionnaire, puis Google Geocoding API
-async function geocodeLocation(lieu, ville) {
-    // 1. PRIORITÉ : Chercher dans le dictionnaire
-    const dictResult = searchInGeoDB(lieu, ville);
-    if (dictResult) {
-        return dictResult;
-    }
-    
-    // 2. FALLBACK : Google Geocoding API
-    const queries = [];
-    
-    // Construire les queries à essayer
-    if (lieu && ville) {
-        queries.push(`${lieu}, ${ville}`);
-    }
-    if (ville) {
-        queries.push(ville);
-    }
-    if (lieu) {
-        queries.push(lieu);
-    }
-    
-    if (queries.length === 0) return null;
-    
-    // Essayer chaque query
-    for (const query of queries) {
-        const normalized = normalizeLocation(query);
-        
-        // Vérifier le cache
-        if (geocodeCache[normalized]) {
-            return geocodeCache[normalized];
-        }
-        
-        try {
-            const API_KEY = 'AIzaSyDgLQjC9cijcR85S6Bg8MUKLS0V9yNQwe8';
-            const response = await fetch(
-                `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(query)}&key=${API_KEY}`
-            );
-            const data = await response.json();
-            
-            if (data.status === 'OK' && data.results && data.results.length > 0) {
-                const location = data.results[0].geometry.location;
-                const result = { lat: location.lat, lng: location.lng };
-                geocodeCache[normalized] = result;
-                return result;
-            }
-        } catch (error) {
-            // Silencieux - passe à la query suivante
-        }
-        
-        // Petit délai pour éviter de spammer l'API
-        await new Promise(resolve => setTimeout(resolve, 50));
-    }
-    
-    return null;
+function geocodeLocation(lieu, ville) {
+    return searchInGeoDB(lieu, ville);
 }
 
 async function initMap() {
