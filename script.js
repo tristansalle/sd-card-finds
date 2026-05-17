@@ -294,7 +294,7 @@ function changePage(newPage) {
 // 5. TAGS
 // ==========================================
 const TAG_CATEGORIES = {
-    'Animaux':      ['aquarium','canard','chamois','chat','chenilles','chèvre','chien','lion','louve','oiseau','pigeon','poisson'],
+    'Animaux':      ['aquarium','canard','chamois','chat','chenilles','chèvre','chien','lion','louve','oiseau','pigeon','poisson','renard'],
     'Personnes':    ['autoportrait','enfant','famille','femme','homme','main','miroir','portrait'],
     'Nature':       ['arbre','cascade','ciel','champs','étang','falaise','feu','fleur','forêt','jardin','lière','mer','montagne','neige','paysage','plage','plante','rivière','rivère','roche','terre','vigne','vignes'],
     'Religion':     ['baptistère','basilique','cathédrale','chapelle','clocher','cloître','église','crèche','sapin','noël'],
