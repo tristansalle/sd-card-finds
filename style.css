@@ -300,6 +300,8 @@ nav {
     cursor: pointer;
     text-align: left;
     line-height: 1.7;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .tag-item:hover { color: var(--accent); }
 .tag-item.active-tag { color: var(--accent); }
