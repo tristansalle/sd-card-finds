@@ -50,8 +50,21 @@ async function loadData() {
         `<span class="stat-accent">${total.toLocaleString('fr-FR')}</span> fichiers`;
     document.getElementById('global-stats-wrapper').classList.add('visible');
 
-    // Cacher le loading screen
+    // Stats landing page
+    const years = allPhotos.map(p => p.date ? parseInt(p.date.slice(0,4)) : null).filter(Boolean);
+    const minYear = Math.min(...years);
+    const maxYear = Math.max(...years);
+    document.getElementById('landing-stat-files').textContent = `${total.toLocaleString('fr-FR')} fichiers`;
+    document.getElementById('landing-stat-years').textContent = `${minYear} — ${maxYear}`;
+
+    // Cacher le loading screen, afficher la landing
     document.getElementById('loading-screen').style.display = 'none';
+    document.getElementById('landing').style.display = 'flex';
+}
+
+function enterArchive() {
+    document.getElementById('landing').style.display = 'none';
+    showView('index', document.querySelector('.nav-btn.active-nav'));
 }
 
 // ==========================================
@@ -890,6 +903,4 @@ function closeMapGallery() {
 // ==========================================
 window.addEventListener('DOMContentLoaded', async () => {
     await loadData();
-    // Auto-afficher l'index au démarrage
-    showView('index', document.querySelector('.nav-btn.active-nav'));
 });

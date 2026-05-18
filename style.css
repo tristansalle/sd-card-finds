@@ -608,6 +608,56 @@ nav {
 }
 
 /* ── LOADING ── */
+#landing {
+    display: none;
+    position: fixed; inset: 0; background: var(--bg);
+    z-index: 9999;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--space-6);
+}
+.landing-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    border-top: var(--hairline) solid var(--line);
+    padding-top: var(--space-3);
+}
+.landing-title {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: clamp(80px, 15vw, 220px);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 0.85;
+    color: var(--text);
+    text-transform: uppercase;
+}
+.landing-meta {
+    display: flex;
+    gap: var(--space-4);
+}
+.landing-stat {
+    font-size: 11px; font-weight: bold;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text);
+    opacity: 0.5;
+}
+.landing-enter {
+    align-self: flex-start;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 11px; font-weight: bold;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: var(--space-2);
+}
+.landing-enter:hover { background: var(--accent); }
+
 #loading-screen {
     position: fixed; inset: 0; background: var(--bg);
     z-index: 100000;
