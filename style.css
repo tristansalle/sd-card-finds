@@ -593,7 +593,7 @@ nav {
     cursor: pointer;
     padding: 0;
 }
-#map-gallery-close-btn:hover { background: var(--accent); }
+#map-gallery-close-btn:hover { background: var(--accent); border-color: var(--accent); }
 #map-gallery-title {
     grid-column: 1 / 6;
     display: flex;
