@@ -622,7 +622,6 @@ nav {
     align-items: flex-start;
     justify-content: space-between;
     gap: var(--space-4);
-    border-top: var(--hairline) solid var(--line);
     padding-top: var(--space-3);
 }
 .landing-right {
