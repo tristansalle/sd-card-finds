@@ -618,10 +618,19 @@ nav {
 }
 .landing-content {
     display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-4);
     border-top: var(--hairline) solid var(--line);
     padding-top: var(--space-3);
+}
+.landing-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-3);
+    padding-bottom: 8px;
 }
 .landing-title {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -634,7 +643,9 @@ nav {
 }
 .landing-meta {
     display: flex;
-    gap: var(--space-4);
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
 }
 .landing-stat {
     font-size: 11px; font-weight: bold;
@@ -644,7 +655,7 @@ nav {
     opacity: 0.5;
 }
 .landing-enter {
-    align-self: flex-start;
+    align-self: flex-end;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 11px; font-weight: bold;
     letter-spacing: -0.02em;
