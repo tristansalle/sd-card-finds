@@ -619,7 +619,7 @@ nav {
 .landing-content {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-between;
     gap: var(--space-4);
     border-top: var(--hairline) solid var(--line);
@@ -629,8 +629,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: space-between;
     gap: var(--space-3);
-    padding-bottom: 8px;
 }
 .landing-title {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
