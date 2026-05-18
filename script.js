@@ -298,7 +298,7 @@ const TAG_CATEGORIES = {
     'Personnes':    ['autoportrait','enfant','famille','femme','homme','main','miroir','portrait'],
     'Nature':       ['arbre','cascade','ciel','champs','étang','falaise','feu','fleur','forêt','lière','mer','montagne','neige','paysage','plage','plante','rivière','rivère','roche','terre','vigne','vignes'],
     'Religion':     ['baptistère','basilique','cathédrale','chapelle','clocher','cloître','église','crèche','sapin','noël'],
-    'Architecture': ['bibliothèque','centre ville','château','colombier','escalier','escaliers','fontaine','immeuble','maison','muret','musée','palais','pont','port','rue','statue','vestiges'],
+    'Architecture': ['bibliothèque','centre ville','château','colombier','escalier','escaliers','fontaine','immeuble','maison','muret','musée','palais','place','pont','port','rue','statue','vestiges'],
     'Transport':    ['autoroute','avion','bateau','camion','cargo','clio','montgolfière','moto','route','tracteur','train','voiture'],
     'Travaux':      ['béton','benne','cloison','coffre fort','fenêtre','garage','mini pelle','outils','papier peint','travaux','tronçonneuse','tuyaux'],
     'Maison':       ['chambre','cuisine','jardin','meuble','mobile-home','porte','portail','salle de bain','salon','table','toilettes'],
