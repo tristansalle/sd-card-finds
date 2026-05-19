@@ -562,13 +562,19 @@ function initRandomCardSelector() {
     const selector = document.getElementById('random-card-selector');
     selector.innerHTML = '';
 
-    availableCards.forEach(card => {
+    let group = null;
+    availableCards.forEach((card, i) => {
+        if (i % 3 === 0) {
+            group = document.createElement('div');
+            group.className = 'random-card-group';
+            selector.appendChild(group);
+        }
         const btn = document.createElement('button');
         btn.className = 'random-card-btn active';
         btn.textContent = 'carte_' + String(parseInt(card.replace('CARTE_', ''), 10)).padStart(2, '0');
         btn.onclick = () => {
             if (selectedCards.has(card)) {
-                if (selectedCards.size === 1) return; // garder au moins 1
+                if (selectedCards.size === 1) return;
                 selectedCards.delete(card);
                 btn.classList.remove('active');
             } else {
@@ -576,7 +582,7 @@ function initRandomCardSelector() {
                 btn.classList.add('active');
             }
         };
-        selector.appendChild(btn);
+        group.appendChild(btn);
     });
 }
 
