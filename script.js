@@ -565,7 +565,7 @@ function initRandomCardSelector() {
     availableCards.forEach(card => {
         const btn = document.createElement('button');
         btn.className = 'random-card-btn active';
-        btn.textContent = card.replace('CARTE_', '');
+        btn.textContent = 'carte_' + String(parseInt(card.replace('CARTE_', ''), 10)).padStart(2, '0');
         btn.onclick = () => {
             if (selectedCards.has(card)) {
                 if (selectedCards.size === 1) return; // garder au moins 1
