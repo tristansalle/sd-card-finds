@@ -443,6 +443,14 @@ nav {
 
 /* ── EXTRACTION ALÉATOIRE ── */
 #random.view-section.active { display: flex; flex-direction: column; }
+.source-label {
+    font-size: 11px; font-weight: bold;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text);
+    white-space: nowrap;
+}
+
 .random-source-bar {
     height: var(--breadcrumb-height);
     border-bottom: var(--hairline) solid var(--line);
