@@ -444,7 +444,7 @@ nav {
 /* ── EXTRACTION ALÉATOIRE ── */
 #random.view-section.active { display: flex; flex-direction: column; }
 .source-label {
-    grid-column: span 3;
+    grid-column: span 2;
     font-size: 11px; font-weight: bold;
     letter-spacing: -0.02em;
     text-transform: uppercase;
@@ -512,7 +512,7 @@ nav {
     cursor: pointer;
     opacity: 0.25;
 }
-.random-card-btn:hover { opacity: 0.6; }
+.random-card-btn:hover { opacity: 1; color: var(--accent); }
 .random-card-btn.active { opacity: 1; }
 
 .random-action-btn {
