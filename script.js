@@ -349,10 +349,7 @@ function displayTags() {
             const btn = document.createElement('button');
             btn.className = 'tag-item';
             btn.dataset.tag = tag;
-            const words = tag.split(' ');
-            const last = words.pop();
-            const rest = words.length ? words.join(' ') + ' ' : '';
-            btn.innerHTML = `${rest}<span style="white-space:nowrap">${last}<span class="tag-count">(${tagCount[tag]})</span></span>`;
+            btn.innerHTML = `<span class="tag-label">${tag}</span><span class="tag-count">(${tagCount[tag]})</span>`;
             btn.onclick = () => toggleTag(tag, btn);
             block.appendChild(btn);
         });
