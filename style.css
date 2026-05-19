@@ -450,7 +450,7 @@ nav {
     text-transform: uppercase;
     color: var(--text);
     display: flex; align-items: center;
-    padding: 0 var(--space-2);
+    padding: 0 var(--space-3);
     white-space: nowrap;
 }
 
