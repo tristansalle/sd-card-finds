@@ -310,7 +310,7 @@ const TAG_CATEGORIES = {
     'Animaux':      ['aquarium','canard','chamois','chat','chenilles','chèvre','chien','lion','louve','oiseau','pigeon','poisson','renard'],
     'Personnes':    ['autoportrait','enfant','famille','femme','homme','main','miroir','portrait'],
     'Nature':       ['arbre','cascade','ciel','champs','étang','falaise','feu','fleur','forêt','lière','mer','montagne','neige','paysage','plage','plante','rivière','rivère','roche','terre','vigne','vignes'],
-    'Religion':     ['baptistère','basilique','cathédrale','chapelle','clocher','cloître','église','crèche','sapin','noël'],
+    'Religion':     ['baptistère','basilique','cathédrale','chapelle','clocher','cloître','église','crèche','grande mosquée','sapin','noël'],
     'Architecture': ['bibliothèque','centre ville','château','colombier','escalier','escaliers','fontaine','immeuble','magasin','maison','muret','musée','palais','place','pont','port','rue','statue','vestiges'],
     'Transport':    ['autoroute','avion','bateau','camion','cargo','clio','montgolfière','moto','route','tracteur','train','voiture'],
     'Travaux':      ['béton','benne','cloison','coffre fort','fenêtre','garage','mini pelle','outils','papier peint','travaux','tronçonneuse','tuyaux'],
