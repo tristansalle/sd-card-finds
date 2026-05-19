@@ -450,7 +450,6 @@ nav {
     color: var(--text);
     display: flex; align-items: center;
     padding: 0 var(--space-2);
-    border-right: var(--hairline) solid var(--line);
 }
 
 .random-source-bar {
@@ -499,21 +498,18 @@ nav {
 .random-card-selector { display: contents; }
 .random-card-btn {
     background: transparent;
-    border: none;
-    border-left: var(--hairline) solid var(--line);
+    border: var(--hairline) solid var(--line);
     color: var(--text);
     font-size: 11px; font-weight: bold;
     letter-spacing: -0.02em;
-    padding: 0 var(--space-2);
+    padding: 4px 8px;
     cursor: pointer;
     text-transform: uppercase;
     font-family: inherit;
-    display: flex; align-items: center;
-    height: 100%;
+    align-self: center;
 }
-.random-card-btn:hover { color: var(--accent); }
-.random-card-btn.active { background: #e0e0e0; }
-.random-card-btn:not(.active) { opacity: 0.35; }
+.random-card-btn:hover { border-color: var(--text); }
+.random-card-btn.active { background: #e0e0e0; color: var(--text); border-color: #e0e0e0; }
 
 .random-action-btn {
     background: var(--text); color: var(--bg);
