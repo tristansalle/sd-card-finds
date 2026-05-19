@@ -507,7 +507,7 @@ nav {
     text-transform: uppercase;
     font-family: inherit;
     align-self: center;
-    justify-self: start;
+    justify-self: center;
 }
 .random-card-btn:hover { border-color: var(--text); }
 .random-card-btn.active { background: #e0e0e0; color: var(--text); border-color: #e0e0e0; }
