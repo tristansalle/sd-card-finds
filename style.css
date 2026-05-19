@@ -452,11 +452,10 @@ nav {
 }
 
 .random-source-bar {
-    height: var(--breadcrumb-height);
     border-bottom: var(--hairline) solid var(--line);
     display: flex;
-    align-items: center;
-    padding: 0 var(--space-3);
+    align-items: flex-start;
+    padding: var(--space-2) var(--space-3);
     gap: var(--space-3);
     flex-shrink: 0;
 }
@@ -495,7 +494,7 @@ nav {
     flex-wrap: wrap;
     gap: 4px;
 }
-.random-card-selector { display: flex; flex-wrap: wrap; gap: 4px; }
+.random-card-selector { display: grid; grid-auto-flow: column; grid-template-rows: repeat(3, auto); gap: 4px; }
 .random-card-btn {
     background: transparent;
     border: var(--hairline) solid var(--line);
