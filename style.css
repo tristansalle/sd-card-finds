@@ -448,18 +448,19 @@ nav {
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: var(--text);
-    white-space: nowrap;
-}
-
-.random-source-bar {
-    height: var(--breadcrumb-height);
-    border-bottom: var(--hairline) solid var(--line);
     display: flex;
     align-items: center;
     padding: 0 var(--space-3);
-    gap: var(--space-3);
+}
+
+.random-source-bar {
+    border-bottom: var(--hairline) solid var(--line);
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(3, var(--breadcrumb-height));
     flex-shrink: 0;
 }
+.random-card-selector { display: contents; }
 .random-showcase {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -497,16 +498,22 @@ nav {
 }
 .random-card-btn {
     background: transparent;
-    border: var(--hairline) solid var(--line);
+    border: none;
+    border-top: var(--hairline) solid var(--line);
     color: var(--text);
     font-size: 11px; font-weight: bold;
     letter-spacing: -0.02em;
-    padding: 4px 8px;
+    padding: 0 var(--space-3);
     cursor: pointer;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-family: inherit;
 }
-.random-card-btn:hover { border-color: var(--text); }
-.random-card-btn.active { background: #e0e0e0; color: var(--text); border-color: #e0e0e0; }
+.random-card-btn:hover { color: var(--accent); }
+.random-card-btn.active { background: #e0e0e0; }
+.random-card-btn:not(.active) { opacity: 0.4; }
 
 .random-action-btn {
     background: var(--text); color: var(--bg);
