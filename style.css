@@ -444,6 +444,7 @@ nav {
 /* ── EXTRACTION ALÉATOIRE ── */
 #random.view-section.active { display: flex; flex-direction: column; }
 .source-label {
+    grid-column: span 3;
     font-size: 11px; font-weight: bold;
     letter-spacing: -0.02em;
     text-transform: uppercase;
@@ -490,12 +491,14 @@ nav {
     line-height: 1.6; letter-spacing: 0.05em;
     color: var(--text);
 }
-.random-card-selector {
+.random-card-selector { display: contents; }
+.random-card-group {
+    grid-column: span 3;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 4px;
 }
-.random-card-selector { display: contents; }
 .random-card-btn {
     background: transparent;
     border: var(--hairline) solid var(--line);
@@ -506,8 +509,6 @@ nav {
     cursor: pointer;
     text-transform: uppercase;
     font-family: inherit;
-    align-self: center;
-    justify-self: center;
 }
 .random-card-btn:hover { border-color: var(--text); }
 .random-card-btn.active { background: #e0e0e0; color: var(--text); border-color: #e0e0e0; }
