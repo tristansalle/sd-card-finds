@@ -2405,15 +2405,6 @@
     "lng": "6.6455933"
   },
   {
-    "fichier": "_MGP4037.JPG",
-    "url": "images/carte_10/JPG/_MGP4037.JPG",
-    "tags": "non-classé",
-    "date": "2014-06-20",
-    "lieu": "",
-    "ville": "",
-    "dossier": "CARTE_10 // JPG"
-  },
-  {
     "fichier": "_MGP4038.JPG",
     "url": "images/carte_10/JPG/_MGP4038.JPG",
     "tags": "montagne,paysage",
@@ -2599,12 +2590,5 @@
     "lieu": "Randonnée du Cap Taillat",
     "lat": "43.1689292",
     "lng": "6.6455933"
-  },
-  {
-    "fichier": "JPG_000001.jpg",
-    "url": "images/carte_10/JPG/JPG_000001.jpg",
-    "tags": "",
-    "date": "2026-03-26",
-    "dossier": "CARTE_10 // JPG"
   }
 ]
