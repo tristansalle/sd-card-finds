@@ -4654,7 +4654,9 @@
     "date": "2024-09-30",
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
-    "lieu": "Place du Capitole"
+    "lieu": "Place du Capitole",
+    "lat": "43.6043987",
+    "lng": "1.4433516"
   },
   {
     "fichier": "DSCF4782.JPG",
@@ -4663,7 +4665,9 @@
     "date": "2024-09-30",
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
-    "lieu": "Place du Capitole"
+    "lieu": "Place du Capitole",
+    "lat": "43.6043987",
+    "lng": "1.4433516"
   },
   {
     "fichier": "DSCF4783.JPG",
@@ -4953,8 +4957,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4819.JPG",
@@ -4964,8 +4968,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4820.JPG",
@@ -4975,8 +4979,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4821.JPG",
@@ -4986,8 +4990,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4822.JPG",
@@ -4997,8 +5001,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4823.JPG",
@@ -5008,8 +5012,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4824.JPG",
@@ -5019,8 +5023,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4825.JPG",
@@ -5030,8 +5034,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4826.JPG",
@@ -5041,8 +5045,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4827.JPG",
@@ -5052,8 +5056,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4828.JPG",
@@ -5063,8 +5067,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4829.JPG",
@@ -5074,8 +5078,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4830.JPG",
@@ -5085,8 +5089,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4831.JPG",
@@ -5096,8 +5100,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4832.JPG",
@@ -5107,8 +5111,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4833.JPG",
@@ -5118,8 +5122,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4834.JPG",
@@ -5129,8 +5133,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4835.JPG",
@@ -5140,8 +5144,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4836.JPG",
@@ -5151,8 +5155,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4837.JPG",
@@ -5162,8 +5166,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4838.JPG",
@@ -5173,8 +5177,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4839.JPG",
@@ -5184,8 +5188,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4840.JPG",
@@ -5195,8 +5199,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4841.JPG",
@@ -5206,8 +5210,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4842.JPG",
@@ -5217,8 +5221,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4843.JPG",
@@ -5228,8 +5232,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4844.JPG",
@@ -5239,8 +5243,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4845.JPG",
@@ -5250,8 +5254,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4846.JPG",
@@ -5261,8 +5265,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4847.JPG",
@@ -5272,8 +5276,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4848.JPG",
@@ -5283,8 +5287,8 @@
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
     "lieu": "Cité de l'espace",
-    "lat": "43.6043",
-    "lng": "1.4437"
+    "lat": "43.5860223",
+    "lng": "1.4927778"
   },
   {
     "fichier": "DSCF4849.JPG",
@@ -5534,7 +5538,9 @@
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
-    "lieu": "Hôtel-Dieu"
+    "lieu": "Hôtel-Dieu",
+    "lat": "43.599456671464715",
+    "lng": "1.4365632157421793"
   },
   {
     "fichier": "DSCF4876.JPG",
@@ -5543,7 +5549,9 @@
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
-    "lieu": "Hôtel-Dieu"
+    "lieu": "Hôtel-Dieu",
+    "lat": "43.599456671464715",
+    "lng": "1.4365632157421793"
   },
   {
     "fichier": "DSCF4877.JPG",
@@ -5552,7 +5560,9 @@
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
-    "lieu": "Hôtel-Dieu"
+    "lieu": "Hôtel-Dieu",
+    "lat": "43.599456671464715",
+    "lng": "1.4365632157421793"
   },
   {
     "fichier": "DSCF4878.JPG",
@@ -5561,7 +5571,9 @@
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
-    "lieu": "Pont-Neuf"
+    "lieu": "Pont-Neuf",
+    "lat": "43.5993424",
+    "lng": "1.4390625"
   },
   {
     "fichier": "DSCF4879.JPG",
