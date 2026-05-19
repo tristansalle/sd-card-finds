@@ -2,6 +2,7 @@
 // 1. VARIABLES GLOBALES
 // ==========================================
 const IMAGE_BASE = 'https://pub-90d2ba705c554d0995cf2293efe23291.r2.dev';
+const THUMB_BASE = IMAGE_BASE + '/thumbs';
 let allPhotos = [];
 let filteredPhotos = [];
 let currentPage = 1;
@@ -37,6 +38,7 @@ async function loadData() {
             if (carte && subfolder) {
                 const carteNum = String(parseInt(carte.replace('CARTE_', ''), 10)).padStart(2, '0');
                 p.url = `${IMAGE_BASE}/images/carte_${carteNum}/${subfolder}/${p.fichier}`;
+                p.thumb = `${THUMB_BASE}/carte_${carteNum}/${subfolder}/${p.fichier}`;
             }
         }
         return p;
@@ -261,11 +263,11 @@ function renderPhotoGrid() {
         
         const ext = (p.url || '').toLowerCase();
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
-            card.innerHTML = `<video src="${p.url}" muted preload="none"></video>`;
+            card.innerHTML = `<video src="${p.thumb || p.url}" muted preload="none"></video>`;
         } else {
-            card.innerHTML = `<img src="${p.url}" alt="${p.fichier || ''}" loading="lazy">`;
+            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy">`;
         }
-        
+
         card.onclick = () => openLightbox(p);
         grid.appendChild(card);
     });
@@ -458,9 +460,9 @@ function validateTagSelection() {
         card.className = 'photo-card';
         const ext = (p.url || '').toLowerCase();
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
-            card.innerHTML = `<video src="${p.url}" muted preload="none"></video>`;
+            card.innerHTML = `<video src="${p.thumb || p.url}" muted preload="none"></video>`;
         } else {
-            card.innerHTML = `<img src="${p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async">`;
+            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async">`;
         }
         card.onclick = () => openLightbox(p);
         frag.appendChild(card);
@@ -529,12 +531,12 @@ function displayTimeline() {
             const ext = (p.url || '').toLowerCase();
             if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
                 const video = document.createElement('video');
-                video.dataset.src = p.url; video.muted = true; video.preload = 'none';
+                video.dataset.src = p.thumb || p.url; video.muted = true; video.preload = 'none';
                 cell.appendChild(video);
                 timelineObserver.observe(video);
             } else {
                 const img = document.createElement('img');
-                img.dataset.src = p.url; img.alt = ''; img.decoding = 'async';
+                img.dataset.src = p.thumb || p.url; img.alt = ''; img.decoding = 'async';
                 cell.appendChild(img);
                 timelineObserver.observe(img);
             }
@@ -887,9 +889,9 @@ function openMapGallery(photos) {
         card.className = 'photo-card';
         const ext = (photo.url || '').toLowerCase();
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
-            card.innerHTML = `<video src="${photo.url}" muted preload="none"></video>`;
+            card.innerHTML = `<video src="${photo.thumb || photo.url}" muted preload="none"></video>`;
         } else {
-            card.innerHTML = `<img src="${photo.url}" alt="${photo.fichier || ''}" loading="lazy" decoding="async">`;
+            card.innerHTML = `<img src="${photo.thumb || photo.url}" alt="${photo.fichier || ''}" loading="lazy" decoding="async">`;
         }
         card.onclick = () => openLightbox(photo);
         frag.appendChild(card);
