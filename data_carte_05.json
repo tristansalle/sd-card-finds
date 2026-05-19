@@ -5292,7 +5292,10 @@
     "tags": "",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Toulouse, Occitanie, Haute-Garonne, France"
+    "ville": "Toulouse, Occitanie, Haute-Garonne, France",
+    "lieu": "Musée Saint-Raymond",
+    "lat": "43.607831",
+    "lng": "1.4411196"
   },
   {
     "fichier": "DSCF4850.JPG",
@@ -5301,7 +5304,9 @@
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France",
-    "lieu": "Basilique Saint-Sernin"
+    "lieu": "Basilique Saint-Sernin",
+    "lat": "43.60843690058762",
+    "lng": "1.4421197239273864"
   },
   {
     "fichier": "DSCF4851.JPG",
@@ -5309,7 +5314,10 @@
     "tags": "",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Toulouse, Occitanie, Haute-Garonne, France"
+    "ville": "Toulouse, Occitanie, Haute-Garonne, France",
+    "lieu": "Collège Pierre de Fermat",
+    "lat": "43.6028418634423",
+    "lng": "1.4395531776916481"
   },
   {
     "fichier": "DSCF4852.JPG",
@@ -5317,7 +5325,10 @@
     "tags": "",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Toulouse, Occitanie, Haute-Garonne, France"
+    "ville": "Toulouse, Occitanie, Haute-Garonne, France",
+    "lieu": "Couvent des Jacobins",
+    "lat": "43.603338",
+    "lng": "1.440012"
   },
   {
     "fichier": "DSCF4853.JPG",
@@ -5325,7 +5336,10 @@
     "tags": "",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Toulouse, Occitanie, Haute-Garonne, France"
+    "ville": "Toulouse, Occitanie, Haute-Garonne, France",
+    "lieu": "Couvent des Jacobins",
+    "lat": "43.603338",
+    "lng": "1.440012"
   },
   {
     "fichier": "DSCF4854.JPG",
@@ -5333,7 +5347,10 @@
     "tags": "",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Toulouse, Occitanie, Haute-Garonne, France"
+    "ville": "Toulouse, Occitanie, Haute-Garonne, France",
+    "lieu": "Couvent des Jacobins",
+    "lat": "43.603338",
+    "lng": "1.440012"
   },
   {
     "fichier": "DSCF4855.JPG",
@@ -5341,7 +5358,10 @@
     "tags": "",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Toulouse, Occitanie, Haute-Garonne, France"
+    "ville": "Toulouse, Occitanie, Haute-Garonne, France",
+    "lieu": "Couvent des Jacobins",
+    "lat": "43.603338",
+    "lng": "1.440012"
   },
   {
     "fichier": "DSCF4856.JPG",
@@ -5349,7 +5369,10 @@
     "tags": "",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Toulouse, Occitanie, Haute-Garonne, France"
+    "ville": "Toulouse, Occitanie, Haute-Garonne, France",
+    "lieu": "Couvent des Jacobins",
+    "lat": "43.603338",
+    "lng": "1.440012"
   },
   {
     "fichier": "DSCF4857.JPG",
@@ -5357,7 +5380,10 @@
     "tags": "",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Toulouse, Occitanie, Haute-Garonne, France"
+    "ville": "Toulouse, Occitanie, Haute-Garonne, France",
+    "lieu": "Couvent des Jacobins",
+    "lat": "43.603338",
+    "lng": "1.440012"
   },
   {
     "fichier": "DSCF4858.JPG",
@@ -5365,7 +5391,10 @@
     "tags": "",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Toulouse, Occitanie, Haute-Garonne, France"
+    "ville": "Toulouse, Occitanie, Haute-Garonne, France",
+    "lieu": "Couvent des Jacobins",
+    "lat": "43.603338",
+    "lng": "1.440012"
   },
   {
     "fichier": "DSCF4859.JPG",
@@ -5373,12 +5402,15 @@
     "tags": "",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Toulouse, Occitanie, Haute-Garonne, France"
+    "ville": "Toulouse, Occitanie, Haute-Garonne, France",
+    "lieu": "Couvent des Jacobins",
+    "lat": "43.603338",
+    "lng": "1.440012"
   },
   {
     "fichier": "DSCF4860.JPG",
     "url": "images/carte_05/DSCF/DSCF4860.JPG",
-    "tags": "",
+    "tags": "bateau,homme,pont,rivière",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France"
@@ -5402,7 +5434,7 @@
   {
     "fichier": "DSCF4863.JPG",
     "url": "images/carte_05/DSCF/DSCF4863.JPG",
-    "tags": "",
+    "tags": "arbre,femme,photo",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France"
@@ -5410,7 +5442,7 @@
   {
     "fichier": "DSCF4864.JPG",
     "url": "images/carte_05/DSCF/DSCF4864.JPG",
-    "tags": "",
+    "tags": "femme,photo",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France"
@@ -5418,7 +5450,7 @@
   {
     "fichier": "DSCF4865.JPG",
     "url": "images/carte_05/DSCF/DSCF4865.JPG",
-    "tags": "",
+    "tags": "femme,photo",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France"
@@ -5442,7 +5474,7 @@
   {
     "fichier": "DSCF4868.JPG",
     "url": "images/carte_05/DSCF/DSCF4868.JPG",
-    "tags": "",
+    "tags": "femme,photo",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France"
@@ -5458,7 +5490,7 @@
   {
     "fichier": "DSCF4870.JPG",
     "url": "images/carte_05/DSCF/DSCF4870.JPG",
-    "tags": "",
+    "tags": "clocher,pont",
     "date": "2024-10-03",
     "dossier": "CARTE_05 // DSCF",
     "ville": "Toulouse, Occitanie, Haute-Garonne, France"
@@ -5577,7 +5609,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4885.JPG",
@@ -5585,7 +5619,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4886.JPG",
@@ -5593,7 +5629,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4887.JPG",
@@ -5601,7 +5639,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4888.JPG",
@@ -5609,7 +5649,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4889.JPG",
@@ -5617,7 +5659,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4890.JPG",
@@ -5625,7 +5669,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4891.JPG",
@@ -5633,7 +5679,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4892.JPG",
@@ -5641,7 +5689,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4893.JPG",
@@ -5649,7 +5699,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4894.JPG",
@@ -5657,7 +5709,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4895.JPG",
@@ -5665,7 +5719,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4896.JPG",
@@ -5673,7 +5729,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4897.JPG",
@@ -5681,7 +5739,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4898.JPG",
@@ -5689,7 +5749,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4899.JPG",
@@ -5697,7 +5759,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4900.JPG",
@@ -5705,7 +5769,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4901.JPG",
@@ -5713,7 +5779,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4902.JPG",
@@ -5721,7 +5789,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4903.JPG",
@@ -5729,7 +5799,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4904.JPG",
@@ -5737,7 +5809,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4905.JPG",
@@ -5745,7 +5819,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4906.JPG",
@@ -5753,7 +5829,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4907.JPG",
@@ -5761,7 +5839,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4908.JPG",
@@ -5769,7 +5849,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4909.JPG",
@@ -5777,7 +5859,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4910.JPG",
@@ -5785,7 +5869,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4911.JPG",
@@ -5793,7 +5879,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4912.JPG",
@@ -5801,7 +5889,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4913.JPG",
@@ -5809,7 +5899,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4914.JPG",
@@ -5817,7 +5909,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4915.JPG",
@@ -5825,7 +5919,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4916.JPG",
@@ -5833,7 +5929,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4917.JPG",
@@ -5841,7 +5939,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4918.JPG",
@@ -5849,7 +5949,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4919.JPG",
@@ -5857,7 +5959,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4920.JPG",
@@ -5865,7 +5969,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4921.JPG",
@@ -5873,7 +5979,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4922.JPG",
@@ -5881,7 +5989,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4923.JPG",
@@ -5889,7 +5999,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4924.JPG",
@@ -5897,7 +6009,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4925.JPG",
@@ -5905,7 +6019,9 @@
     "tags": "",
     "date": "2024-10-04",
     "dossier": "CARTE_05 // DSCF",
-    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France"
+    "ville": "Rieux-Volvestre, Haute-Garonne, Occitanie, France",
+    "lat": "43.2574528",
+    "lng": "1.2014109"
   },
   {
     "fichier": "DSCF4926.JPG",
