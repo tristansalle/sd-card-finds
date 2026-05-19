@@ -495,10 +495,10 @@ nav {
 .random-card-selector { display: contents; }
 .random-card-group {
     grid-column: span 3;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    justify-content: center;
-    gap: 4px;
+    justify-items: center;
 }
 .random-card-btn {
     background: none;
