@@ -451,6 +451,7 @@ nav {
     color: var(--text);
     display: flex; align-items: center;
     padding: 0 var(--space-2);
+    white-space: nowrap;
 }
 
 .random-source-bar {
@@ -501,17 +502,18 @@ nav {
 }
 .random-card-btn {
     background: transparent;
-    border: var(--hairline) solid var(--line);
+    border: none;
     color: var(--text);
     font-size: 11px; font-weight: bold;
     letter-spacing: -0.02em;
-    padding: 4px 8px;
+    padding: 2px 6px;
     cursor: pointer;
     text-transform: uppercase;
     font-family: inherit;
+    opacity: 0.3;
 }
-.random-card-btn:hover { border-color: var(--text); }
-.random-card-btn.active { background: #e0e0e0; color: var(--text); border-color: #e0e0e0; }
+.random-card-btn:hover { opacity: 0.7; }
+.random-card-btn.active { opacity: 1; }
 
 .random-action-btn {
     background: var(--text); color: var(--bg);
