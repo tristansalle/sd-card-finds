@@ -265,7 +265,7 @@ function renderPhotoGrid() {
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
             card.innerHTML = `<video src="${p.thumb || p.url}" muted preload="none"></video>`;
         } else {
-            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy">`;
+            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" decoding="async">`;
         }
 
         card.onclick = () => openLightbox(p);
