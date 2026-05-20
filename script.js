@@ -20,7 +20,7 @@ let timelineYearIndex = -1;
 // ==========================================
 async function loadData() {
     const promises = [];
-    for (let i = 1; i <= 14; i++) {
+    for (let i = 1; i <= 16; i++) {
         const num = String(i).padStart(2, '0');
         promises.push(
             fetch(`data_carte_${num}.json`)
@@ -131,7 +131,7 @@ function displayIndex() {
     });
     
     // Créer TOUTES les cartes de 01 à 14 (même vides)
-    for (let i = 1; i <= 14; i++) {
+    for (let i = 1; i <= 16; i++) {
         const num = String(i).padStart(2, '0');
         const carteName = `CARTE_${num}`; // CARTE_01, CARTE_02, etc. (2 chiffres)
         
