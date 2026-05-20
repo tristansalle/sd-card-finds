@@ -265,7 +265,7 @@ function renderPhotoGrid() {
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
             card.innerHTML = `<video src="${p.thumb || p.url}" muted preload="none"></video>`;
         } else {
-            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" decoding="async">`;
+            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" decoding="async" onerror="this.src='${p.url}'">`;
         }
 
         card.onclick = () => openLightbox(p);
@@ -462,7 +462,7 @@ function validateTagSelection() {
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
             card.innerHTML = `<video src="${p.thumb || p.url}" muted preload="none"></video>`;
         } else {
-            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async">`;
+            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async" onerror="this.src='${p.url}'">`;
         }
         card.onclick = () => openLightbox(p);
         frag.appendChild(card);
@@ -536,7 +536,7 @@ function displayTimeline() {
                 timelineObserver.observe(video);
             } else {
                 const img = document.createElement('img');
-                img.dataset.src = p.thumb || p.url; img.alt = ''; img.decoding = 'async';
+                img.dataset.src = p.thumb || p.url; img.dataset.fallback = p.url; img.alt = ''; img.decoding = 'async'; img.onerror = function(){ this.src = this.dataset.fallback; };
                 cell.appendChild(img);
                 timelineObserver.observe(img);
             }
@@ -891,7 +891,7 @@ function openMapGallery(photos) {
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
             card.innerHTML = `<video src="${photo.thumb || photo.url}" muted preload="none"></video>`;
         } else {
-            card.innerHTML = `<img src="${photo.thumb || photo.url}" alt="${photo.fichier || ''}" loading="lazy" decoding="async">`;
+            card.innerHTML = `<img src="${photo.thumb || photo.url}" alt="${photo.fichier || ''}" loading="lazy" decoding="async" onerror="this.src='${photo.url}'">`;
         }
         card.onclick = () => openLightbox(photo);
         frag.appendChild(card);
