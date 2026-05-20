@@ -59,16 +59,6 @@ async function loadData() {
     document.getElementById('landing-stat-files').textContent = `${total.toLocaleString('fr-FR')} fichiers`;
     document.getElementById('landing-stat-years').textContent = `${minYear} — ${maxYear}`;
 
-    // Scans des cartes SD
-    const strip = document.getElementById('landing-cards-strip');
-    for (let i = 1; i <= 16; i++) {
-        const img = document.createElement('img');
-        img.className = 'landing-card-img';
-        img.src = `${THUMB_BASE}/cartes_sd/CARTE_${String(i).padStart(2,'0')}.jpg`;
-        img.alt = `Carte SD ${i}`;
-        strip.appendChild(img);
-    }
-
     // Cacher le loading screen, afficher la landing
     document.getElementById('loading-screen').style.display = 'none';
     document.getElementById('landing').style.display = 'flex';
