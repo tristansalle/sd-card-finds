@@ -465,12 +465,12 @@ nav {
 .lightbox-sidebar-header {
     height: var(--breadcrumb-height);
     border-bottom: var(--hairline) solid var(--line);
-    display: flex;
+    display: grid; grid-template-columns: 1fr 1fr;
     flex-shrink: 0;
 }
 .close-lightbox {
-    flex: 1;
-    border: none;
+    grid-column: 2 / 3;
+    border: none; border-left: var(--hairline) solid var(--line);
     background: var(--text); color: var(--bg);
     font-size: 11px; font-weight: bold;
     text-transform: uppercase; letter-spacing: -0.02em;
