@@ -658,7 +658,6 @@ function openLightbox(photo) {
         audio.src = photo.url;
         audioContainer.style.display = 'flex';
     } else {
-        img.style.objectFit = 'contain';
         img.src = photo.url;
         img.style.display = 'block';
     }
@@ -687,20 +686,6 @@ function openLightbox(photo) {
     `;
     
     lightbox.classList.add('active');
-
-    // Ajuster objectFit après rendu (lightbox visible + image potentiellement en cache)
-    requestAnimationFrame(() => {
-        const applyFit = () => {
-            const media = img.closest('.lightbox-media');
-            if (!media || !img.naturalWidth) return;
-            const cRatio = media.clientWidth / media.clientHeight;
-            const iRatio = img.naturalWidth / img.naturalHeight;
-            img.style.objectFit = Math.abs(cRatio - iRatio) / cRatio < 0.30 ? 'cover' : 'contain';
-        };
-        if (img.style.display === 'block') {
-            img.naturalWidth ? applyFit() : img.addEventListener('load', applyFit, { once: true });
-        }
-    });
 }
 
 function closeLightbox(event) {
