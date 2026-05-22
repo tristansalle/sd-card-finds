@@ -228,9 +228,15 @@ nav {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 18px;
-    color: rgba(255,255,255,0.55);
-    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    font-size: 22px;
+    color: #fff;
+    background: rgba(0,0,0,0.45);
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    line-height: 44px;
+    text-align: center;
+    text-indent: 3px;
     pointer-events: none;
 }
 
