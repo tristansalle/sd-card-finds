@@ -133,8 +133,8 @@ function displayIndex() {
         folders[carte][subfolder].push(p);
     });
     
-    // Créer TOUTES les cartes de 01 à 14 (même vides)
-    for (let i = 1; i <= 16; i++) {
+    // Créer TOUTES les cartes de 01 à 18 (même vides)
+    for (let i = 1; i <= 18; i++) {
         const num = String(i).padStart(2, '0');
         const carteName = `CARTE_${num}`; // CARTE_01, CARTE_02, etc. (2 chiffres)
         
@@ -151,7 +151,7 @@ function displayIndex() {
             : 0;
 
         item.innerHTML = `
-            <img src="${cardImgUrl}" alt="${carteName}">
+            <img src="${cardImgUrl}" alt="${carteName}" onerror="this.style.visibility='hidden'">
             <div>
                 <div>${carteName}</div>
                 <div class="sidebar-item-meta">
