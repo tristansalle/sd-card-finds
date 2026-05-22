@@ -695,7 +695,7 @@ function openLightbox(photo) {
             if (!media || !img.naturalWidth) return;
             const cRatio = media.clientWidth / media.clientHeight;
             const iRatio = img.naturalWidth / img.naturalHeight;
-            img.style.objectFit = Math.abs(cRatio - iRatio) / cRatio < 0.15 ? 'cover' : 'contain';
+            img.style.objectFit = Math.abs(cRatio - iRatio) / cRatio < 0.30 ? 'cover' : 'contain';
         };
         if (img.style.display === 'block') {
             img.naturalWidth ? applyFit() : img.addEventListener('load', applyFit, { once: true });
