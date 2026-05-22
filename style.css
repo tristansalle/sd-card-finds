@@ -421,7 +421,7 @@ nav {
     background: var(--bg);
     z-index: 10000;
     display: none;
-    grid-template-columns: minmax(0, 5fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 4fr) minmax(0, 2fr);
 }
 .lightbox.active { display: grid; }
 
