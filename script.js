@@ -75,6 +75,7 @@ function enterArchive() {
 // 3. NAVIGATION
 // ==========================================
 function showView(viewName, btnElement) {
+    closeLightbox();
     // Désactiver toutes les sections
     document.querySelectorAll('.view-section').forEach(s => s.classList.remove('active'));
     document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active-nav'));
