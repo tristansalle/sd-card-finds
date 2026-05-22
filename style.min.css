@@ -205,6 +205,12 @@ nav {
     letter-spacing: -0.02em; text-transform: uppercase;
     position: relative; z-index: 1;
 }
+.sub-folder-count {
+    font-size: 10px; color: var(--text-light);
+    font-family: 'Courier New', monospace;
+    position: relative; z-index: 1;
+    margin-top: 2px;
+}
 
 .photo-card img, .photo-card video {
     position: absolute; top: 0; left: 0;

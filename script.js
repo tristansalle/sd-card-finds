@@ -205,6 +205,7 @@ function displaySubfolders(carteName, subfolders) {
     Object.keys(subfolders).sort().forEach(subfolder => {
         const folder = document.createElement('div');
         folder.className = 'sub-folder';
+        const count = subfolders[subfolder].length;
         folder.innerHTML = `
             <div class="sub-folder-icon">
                 <svg width="36" height="28" viewBox="0 0 36 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round">
@@ -213,6 +214,7 @@ function displaySubfolders(carteName, subfolders) {
                 </svg>
             </div>
             <div class="sd-id">${subfolder || '(sans nom)'}</div>
+            <div class="sub-folder-count">${count} fichier${count > 1 ? 's' : ''}</div>
         `;
         folder.onclick = () => displayPhotosGrid(subfolders[subfolder], carteName, subfolder);
         grid.appendChild(folder);
