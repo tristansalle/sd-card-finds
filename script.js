@@ -910,6 +910,7 @@ function openMapGallery(photos) {
     });
     grid.appendChild(frag);
     panel.classList.add('visible');
+    grid.scrollTop = 0;
     setTimeout(() => mapInstance && mapInstance.invalidateSize(), 50);
 }
 
