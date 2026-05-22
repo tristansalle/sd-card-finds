@@ -416,40 +416,63 @@ nav {
 
 /* ── LIGHTBOX ── */
 .lightbox {
-    position: fixed; inset: 0;
+    position: fixed;
+    top: var(--nav-height); left: 0; right: 0; bottom: 0;
     background: var(--bg);
     z-index: 10000;
-    display: none; flex-direction: column;
+    display: none;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 1fr);
+}
+.lightbox.active { display: grid; }
+
+.lightbox-media {
+    display: flex;
     align-items: center; justify-content: center;
+    overflow: hidden;
+    border-right: var(--hairline) solid var(--line);
+    background: var(--bg);
 }
 .lightbox-img {
     display: none;
-    max-width: 85vw; max-height: 72vh;
+    max-width: 100%; max-height: 100%;
     object-fit: contain;
-    border: var(--hairline) solid var(--line);
 }
 #lightbox-video {
     display: none;
-    max-width: 85vw; max-height: 72vh;
-    border: var(--hairline) solid var(--line);
+    max-width: 100%; max-height: 100%;
 }
 .lightbox-audio-container {
     display: none;
     flex-direction: column; align-items: center;
     padding: var(--space-4);
 }
-.lightbox-meta {
-    margin-top: var(--space-3);
-    font-family: 'Courier New', monospace;
-    font-size: 11px; font-weight: bold;
-    width: 85vw; max-width: 1200px;
-    border-top: var(--hairline) solid var(--line);
-    padding-top: var(--space-2);
+
+.lightbox-sidebar {
+    display: flex; flex-direction: column;
+    overflow: hidden;
+    border-left: var(--hairline) solid var(--line);
+}
+.lightbox-sidebar-header {
+    height: var(--breadcrumb-height);
+    border-bottom: var(--hairline) solid var(--line);
+    display: flex; align-items: center;
+    padding: 0 var(--space-3);
+    flex-shrink: 0;
 }
 .close-lightbox {
-    position: absolute; top: var(--space-3); right: var(--space-3);
-    background: none; border: none; font-size: 48px;
-    cursor: pointer; z-index: 10001; line-height: 1;
+    background: none; border: none;
+    font-size: 11px; font-weight: bold;
+    text-transform: uppercase; letter-spacing: -0.02em;
+    cursor: pointer; color: var(--text);
+    font-family: inherit;
+}
+.close-lightbox:hover { color: var(--accent); }
+.lightbox-meta {
+    padding: var(--space-3);
+    font-family: 'Courier New', monospace;
+    font-size: 11px; font-weight: bold;
+    overflow-y: auto;
+    line-height: 1.8;
 }
 
 /* ── EXTRACTION ALÉATOIRE ── */
