@@ -113,7 +113,9 @@ const cardSizes = {
     'CARTE_06': '2,2 Go',
     'CARTE_08': '2,4 Go',
     'CARTE_10': '464,6 Mo',
-    'CARTE_14': '3,89 Go'
+    'CARTE_14': '3,89 Go',
+    'CARTE_17': '278 Mo',
+    'CARTE_18': '176,2 Mo'
 };
 
 function displayIndex() {
