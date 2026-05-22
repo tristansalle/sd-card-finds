@@ -38,7 +38,8 @@ async function loadData() {
             if (carte && subfolder) {
                 const carteNum = String(parseInt(carte.replace('CARTE_', ''), 10)).padStart(2, '0');
                 p.url = `${IMAGE_BASE}/images/carte_${carteNum}/${subfolder}/${p.fichier}`;
-                p.thumb = `${THUMB_BASE}/carte_${carteNum}/${subfolder}/${p.fichier}`;
+                const isVideo = /\.(mp4|mov|avi|webm)$/i.test(p.fichier);
+                p.thumb = isVideo ? null : `${THUMB_BASE}/carte_${carteNum}/${subfolder}/${p.fichier}`;
             }
         }
         return p;
