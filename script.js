@@ -39,7 +39,10 @@ async function loadData() {
                 const carteNum = String(parseInt(carte.replace('CARTE_', ''), 10)).padStart(2, '0');
                 p.url = `${IMAGE_BASE}/images/carte_${carteNum}/${subfolder}/${p.fichier}`;
                 const isVideo = /\.(mp4|mov|avi|webm)$/i.test(p.fichier);
-                p.thumb = isVideo ? null : `${THUMB_BASE}/carte_${carteNum}/${subfolder}/${p.fichier}`;
+                const thumbFile = isVideo
+                    ? p.fichier.replace(/\.[^.]+$/, '.jpg')
+                    : p.fichier;
+                p.thumb = `${THUMB_BASE}/carte_${carteNum}/${subfolder}/${thumbFile}`;
             }
         }
         return p;
@@ -264,7 +267,7 @@ function renderPhotoGrid() {
         
         const ext = (p.url || '').toLowerCase();
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
-            card.innerHTML = `<video src="${p.thumb || p.url}" muted preload="none"></video>`;
+            card.innerHTML = `<video src="${p.url}" poster="${p.thumb || ''}" muted preload="none"></video>`;
         } else {
             card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" decoding="async" onerror="this.src='${p.url}'">`;
         }
@@ -461,7 +464,7 @@ function validateTagSelection() {
         card.className = 'photo-card';
         const ext = (p.url || '').toLowerCase();
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
-            card.innerHTML = `<video src="${p.thumb || p.url}" muted preload="none"></video>`;
+            card.innerHTML = `<video src="${p.url}" poster="${p.thumb || ''}" muted preload="none"></video>`;
         } else {
             card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async" onerror="this.src='${p.url}'">`;
         }
@@ -532,7 +535,7 @@ function displayTimeline() {
             const ext = (p.url || '').toLowerCase();
             if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
                 const video = document.createElement('video');
-                video.dataset.src = p.thumb || p.url; video.muted = true; video.preload = 'none';
+                video.dataset.src = p.url; video.poster = p.thumb || ''; video.muted = true; video.preload = 'none';
                 cell.appendChild(video);
                 timelineObserver.observe(video);
             } else {
@@ -890,7 +893,7 @@ function openMapGallery(photos) {
         card.className = 'photo-card';
         const ext = (photo.url || '').toLowerCase();
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
-            card.innerHTML = `<video src="${photo.thumb || photo.url}" muted preload="none"></video>`;
+            card.innerHTML = `<video src="${photo.url}" poster="${photo.thumb || ''}" muted preload="none"></video>`;
         } else {
             card.innerHTML = `<img src="${photo.thumb || photo.url}" alt="${photo.fichier || ''}" loading="lazy" decoding="async" onerror="this.src='${photo.url}'">`;
         }
