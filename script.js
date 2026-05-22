@@ -685,7 +685,7 @@ function openLightbox(photo) {
         <div><span class="data-label">TAGS:</span> ${tags || 'Aucun'}</div>
     `;
     
-    lightbox.style.display = 'flex';
+    lightbox.classList.add('active');
 }
 
 function closeLightbox(event) {
@@ -699,7 +699,7 @@ function closeLightbox(event) {
     audio.pause();
     audio.src = '';
     
-    lightbox.style.display = 'none';
+    lightbox.classList.remove('active');
 }
 
 // ==========================================

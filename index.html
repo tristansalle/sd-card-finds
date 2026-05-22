@@ -139,15 +139,21 @@
     </section>
 
     <!-- LIGHTBOX -->
-    <div id="lightbox" class="lightbox" onclick="if(event.target===this) closeLightbox(event)">
-        <button class="close-lightbox" onclick="closeLightbox(event)">×</button>
-        <img id="lightbox-image" class="lightbox-img" src="" alt="">
-        <video id="lightbox-video" class="lightbox-img" controls></video>
-        <div id="lightbox-audio-container" class="lightbox-audio-container">
-            <div style="font-size: 64px; margin-bottom: 20px;">♪</div>
-            <audio id="lightbox-audio" controls></audio>
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-media">
+            <img id="lightbox-image" class="lightbox-img" src="" alt="">
+            <video id="lightbox-video" class="lightbox-img" controls></video>
+            <div id="lightbox-audio-container" class="lightbox-audio-container">
+                <div style="font-size: 64px; margin-bottom: 20px;">♪</div>
+                <audio id="lightbox-audio" controls></audio>
+            </div>
         </div>
-        <div id="lightbox-metadata" class="lightbox-meta"></div>
+        <div class="lightbox-sidebar">
+            <div class="lightbox-sidebar-header">
+                <button class="close-lightbox" onclick="closeLightbox(event)">[ FERMER ]</button>
+            </div>
+            <div id="lightbox-metadata" class="lightbox-meta"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
