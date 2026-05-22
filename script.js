@@ -658,6 +658,14 @@ function openLightbox(photo) {
         audio.src = photo.url;
         audioContainer.style.display = 'flex';
     } else {
+        img.style.objectFit = 'contain';
+        img.onload = function () {
+            const media = img.closest('.lightbox-media');
+            const cRatio = media.clientWidth / media.clientHeight;
+            const iRatio = img.naturalWidth / img.naturalHeight;
+            const diff = Math.abs(cRatio - iRatio) / cRatio;
+            img.style.objectFit = diff < 0.15 ? 'cover' : 'contain';
+        };
         img.src = photo.url;
         img.style.display = 'block';
     }
