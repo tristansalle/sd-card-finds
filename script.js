@@ -20,7 +20,7 @@ let timelineYearIndex = -1;
 // ==========================================
 async function loadData() {
     const promises = [];
-    for (let i = 1; i <= 16; i++) {
+    for (let i = 1; i <= 18; i++) {
         const num = String(i).padStart(2, '0');
         promises.push(
             fetch(`data_carte_${num}.json`)
