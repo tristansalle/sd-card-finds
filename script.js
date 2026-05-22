@@ -686,6 +686,16 @@ function openLightbox(photo) {
     `;
     
     lightbox.classList.add('active');
+
+    if (img.style.display === 'block') {
+        const applyFit = () => {
+            const media = img.closest('.lightbox-media');
+            if (!media || !img.naturalWidth) return;
+            const diff = Math.abs(media.clientWidth / media.clientHeight - img.naturalWidth / img.naturalHeight) / (media.clientWidth / media.clientHeight);
+            img.classList.toggle('is-cover', diff < 0.12);
+        };
+        requestAnimationFrame(() => img.naturalWidth ? applyFit() : img.addEventListener('load', applyFit, { once: true }));
+    }
 }
 
 function closeLightbox(event) {
