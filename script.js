@@ -12,6 +12,8 @@ let selectedCards = new Set();
 let selectedTags = new Set();
 let tagCountBase = {};
 let randomInitialized = false;
+let lightboxPhotos = [];
+let lightboxIndex = -1;
 let timelineYears = [];
 let timelineYearIndex = -1;
 
@@ -276,10 +278,10 @@ function renderPhotoGrid() {
             card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" decoding="async" onerror="this.src='${p.url}'">`;
         }
 
-        card.onclick = () => openLightbox(p);
+        card.onclick = () => openLightbox(p, filteredPhotos);
         grid.appendChild(card);
     });
-    
+
     // Cacher la pagination
     document.getElementById('pagination-controls').style.display = 'none';
 }
@@ -472,7 +474,7 @@ function validateTagSelection() {
         } else {
             card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async" onerror="this.src='${p.url}'">`;
         }
-        card.onclick = () => openLightbox(p);
+        card.onclick = () => openLightbox(p, filteredPhotos);
         frag.appendChild(card);
     });
     results.appendChild(frag);
@@ -548,7 +550,7 @@ function displayTimeline() {
                 cell.appendChild(img);
                 timelineObserver.observe(img);
             }
-            cell.addEventListener('click', () => openLightbox(p));
+            cell.addEventListener('click', () => openLightbox(p, sorted));
             frag.appendChild(cell);
         }
 
@@ -640,7 +642,17 @@ function extractRandom() {
 // ==========================================
 // 8. LIGHTBOX
 // ==========================================
-function openLightbox(photo) {
+function navigateLightbox(dir) {
+    if (!lightboxPhotos.length) return;
+    lightboxIndex = (lightboxIndex + dir + lightboxPhotos.length) % lightboxPhotos.length;
+    openLightbox(lightboxPhotos[lightboxIndex]);
+}
+
+function openLightbox(photo, photoList) {
+    if (photoList) {
+        lightboxPhotos = photoList;
+        lightboxIndex = photoList.indexOf(photo);
+    }
     const lightbox = document.getElementById('lightbox');
     const img = document.getElementById('lightbox-image');
     const video = document.getElementById('lightbox-video');
@@ -911,7 +923,7 @@ function openMapGallery(photos) {
         } else {
             card.innerHTML = `<img src="${photo.thumb || photo.url}" alt="${photo.fichier || ''}" loading="lazy" decoding="async" onerror="this.src='${photo.url}'">`;
         }
-        card.onclick = () => openLightbox(photo);
+        card.onclick = () => openLightbox(photo, photos);
         frag.appendChild(card);
     });
     grid.appendChild(frag);
