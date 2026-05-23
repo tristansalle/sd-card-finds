@@ -517,6 +517,13 @@ function displayTimeline() {
     }, { rootMargin: '400px' });
 
     const BATCH = 80;
+    // Compte par année
+    const yearCounts = {};
+    sorted.forEach(p => {
+        const y = p.date.substring(0, 4);
+        yearCounts[y] = (yearCounts[y] || 0) + 1;
+    });
+
     let i = 0;
     let currentYear = null;
 
@@ -533,7 +540,8 @@ function displayTimeline() {
                 const header = document.createElement('div');
                 header.className = 'timeline-year-header';
                 header.dataset.year = year;
-                header.textContent = `// ${year}`;
+                const count = yearCounts[year];
+                header.innerHTML = `<span>// ${year}</span><span class="timeline-year-count">${count} fichier${count > 1 ? 's' : ''}</span>`;
                 frag.appendChild(header);
             }
 
