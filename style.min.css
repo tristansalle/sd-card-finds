@@ -484,7 +484,24 @@ nav {
     font-size: 11px; font-weight: bold;
     overflow-y: auto;
     line-height: 1.8;
+    flex: 1;
 }
+.lightbox-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: var(--hairline) solid var(--line);
+    flex-shrink: 0;
+}
+.lightbox-nav-btn {
+    border: none; border-radius: 0;
+    background: var(--bg); color: var(--text);
+    font-size: 18px; font-weight: bold;
+    height: var(--breadcrumb-height);
+    cursor: pointer; font-family: inherit;
+    padding: 0;
+}
+.lightbox-nav-btn:hover { background: var(--text); color: var(--bg); }
+.lightbox-nav-btn:first-child { border-right: var(--hairline) solid var(--line); }
 
 /* ── EXTRACTION ALÉATOIRE ── */
 #random.view-section.active { display: flex; flex-direction: column; }
