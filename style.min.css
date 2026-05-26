@@ -736,7 +736,7 @@ nav {
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    gap: 3px;
+    gap: 0;
     padding-top: var(--space-3);
 }
 .landing-right {
@@ -745,6 +745,11 @@ nav {
     align-items: flex-end;
     justify-content: space-between;
     align-self: stretch;
+}
+.landing-left {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
 }
 .landing-card-img {
     height: clamp(100px, 22vw, 323px);
