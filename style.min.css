@@ -747,14 +747,14 @@ nav {
     align-self: stretch;
 }
 .landing-card-img {
-    height: clamp(200px, 42vw, 620px);
+    height: clamp(120px, 26vw, 380px);
     width: auto;
     object-fit: contain;
     align-self: flex-end;
 }
 .landing-title {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: clamp(80px, 15vw, 220px);
+    font-size: clamp(50px, 9vw, 140px);
     font-weight: 700;
     letter-spacing: -0.04em;
     line-height: 0.85;
