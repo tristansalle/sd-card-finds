@@ -746,6 +746,12 @@ nav {
     justify-content: space-between;
     align-self: stretch;
 }
+.landing-card-img {
+    height: clamp(120px, 22vw, 320px);
+    width: auto;
+    object-fit: contain;
+    align-self: flex-end;
+}
 .landing-title {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: clamp(80px, 15vw, 220px);
