@@ -749,16 +749,16 @@ nav {
 .landing-left {
     display: flex;
     align-items: flex-end;
-    gap: 3px;
+    gap: 10px;
 }
 .landing-card-img {
-    height: clamp(100px, 22vw, 323px);
+    height: clamp(110px, 24.2vw, 355px);
     width: auto;
     object-fit: contain;
 }
 .landing-title {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: clamp(50px, 9vw, 140px);
+    font-size: clamp(55px, 9.9vw, 154px);
     font-weight: 700;
     letter-spacing: -0.04em;
     line-height: 0.85;
