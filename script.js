@@ -73,10 +73,12 @@ let landingCarouselInterval = null;
 function startLandingCarousel() {
     const img = document.querySelector('.landing-card-img');
     const cards = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16'];
-    let idx = cards.indexOf('02');
+    let last = '02';
     landingCarouselInterval = setInterval(() => {
-        idx = (idx + 1) % cards.length;
-        img.src = `images/cartes_sd/CARTE_${cards[idx]}.png`;
+        let pick;
+        do { pick = cards[Math.floor(Math.random() * cards.length)]; } while (pick === last);
+        last = pick;
+        img.src = `images/cartes_sd/CARTE_${pick}.png`;
     }, 500);
 }
 
