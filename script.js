@@ -77,7 +77,7 @@ function startLandingCarousel() {
     landingCarouselInterval = setInterval(() => {
         idx = (idx + 1) % cards.length;
         img.src = `images/cartes_sd/CARTE_${cards[idx]}.png`;
-    }, 1000);
+    }, 500);
 }
 
 function enterArchive() {
