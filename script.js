@@ -66,9 +66,22 @@ async function loadData() {
     // Cacher le loading screen, afficher la landing
     document.getElementById('loading-screen').style.display = 'none';
     document.getElementById('landing').style.display = 'flex';
+    startLandingCarousel();
+}
+
+let landingCarouselInterval = null;
+function startLandingCarousel() {
+    const img = document.querySelector('.landing-card-img');
+    const cards = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16'];
+    let idx = cards.indexOf('02');
+    landingCarouselInterval = setInterval(() => {
+        idx = (idx + 1) % cards.length;
+        img.src = `images/cartes_sd/CARTE_${cards[idx]}.png`;
+    }, 1000);
 }
 
 function enterArchive() {
+    if (landingCarouselInterval) { clearInterval(landingCarouselInterval); landingCarouselInterval = null; }
     document.getElementById('landing').style.display = 'none';
     showView('index', document.querySelector('.nav-btn.active-nav'));
 }
