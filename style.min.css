@@ -306,6 +306,7 @@ nav {
     padding-bottom: 6px;
     margin-bottom: 6px;
 }
+.tag-category-name.tag-category-zero { opacity: 0.25; }
 .tag-item {
     display: block;
     width: 100%;
