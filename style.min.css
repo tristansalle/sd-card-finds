@@ -478,18 +478,17 @@ nav {
     background: var(--bg);
     border-bottom: var(--hairline) solid var(--line);
     z-index: 10001;
-    grid-template-columns: minmax(0, 5fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) repeat(5, minmax(0, 1fr));
     align-items: stretch;
 }
 #lightbox-crumb-bar.visible { display: grid; }
 #lightbox-crumb-path {
+    grid-column: 2 / 6;
     display: flex;
     align-items: center;
     padding: 0 var(--space-3);
     font-size: 11px; font-weight: bold;
     text-transform: uppercase; letter-spacing: -0.02em;
-    color: var(--text);
-    gap: 0;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -497,6 +496,7 @@ nav {
 .crumb-part.crumb-last { color: var(--text); }
 .crumb-sep { color: var(--line); margin: 0 6px; }
 #lightbox-crumb-back {
+    grid-column: 6 / 7;
     border: none; border-left: var(--hairline) solid var(--line);
     background: var(--text); color: var(--bg);
     font-size: 11px; font-weight: bold;
