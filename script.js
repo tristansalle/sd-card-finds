@@ -727,6 +727,14 @@ function openLightbox(photo, photoList) {
     
     lightbox.classList.add('active');
 
+    // Masquer le breadcrumb index, afficher le bouton retour dans le breadcrumb
+    const bcText = document.getElementById('breadcrumb');
+    const bcBack = document.getElementById('lightbox-back-btn');
+    const bcPag  = document.getElementById('pagination-controls');
+    if (bcText) bcText.style.visibility = 'hidden';
+    if (bcPag && bcPag.style.display !== 'none') bcPag.style.visibility = 'hidden';
+    if (bcBack) bcBack.style.display = 'flex';
+
     if (img.style.display === 'block') {
         const applyFit = () => {
             const media = img.closest('.lightbox-media');
@@ -750,6 +758,14 @@ function closeLightbox(event) {
     audio.src = '';
     
     lightbox.classList.remove('active');
+
+    // Restaurer le breadcrumb index
+    const bcText = document.getElementById('breadcrumb');
+    const bcBack = document.getElementById('lightbox-back-btn');
+    const bcPag  = document.getElementById('pagination-controls');
+    if (bcText) bcText.style.visibility = '';
+    if (bcPag)  bcPag.style.visibility = '';
+    if (bcBack) bcBack.style.display = 'none';
 }
 
 // ==========================================
