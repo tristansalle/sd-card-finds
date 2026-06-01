@@ -915,18 +915,20 @@ function refreshMarkerPopup(key) {
     const p = photos[0];
     const [carteName, sousDossier] = (p.dossier || '').split(' // ');
     const chemin = sousDossier ? `${carteName} // ${sousDossier}` : (carteName || 'Inconnu');
-    const countLine = photos.length > 1 ? `<div style="color:#ff0000;">${photos.length} photos</div>` : `<div style="color:#777;">${p.fichier}</div>`;
-    const lieuLine  = p.lieu  ? `<div style="font-weight:bold;font-size:12px;letter-spacing:-0.02em;text-transform:uppercase;margin-bottom:2px;">${p.lieu}</div>` : '';
-    const villeLine = p.ville ? `<div style="color:#777;font-size:10px;margin-bottom:4px;">${p.ville}</div>` : (!p.lieu ? `<div style="font-weight:bold;margin-bottom:4px;">Sans localisation</div>` : '');
+    const countHTML = photos.length > 1
+        ? `<span class="popup-count-multi">↗ ${photos.length} photos</span>`
+        : `<span class="popup-count-single">${p.fichier}</span>`;
+    const lieuHTML  = p.lieu  ? `<div class="popup-lieu">${p.lieu}</div>` : `<div class="popup-lieu">—</div>`;
+    const villeHTML = p.ville ? `<div class="popup-ville">${p.ville}</div>` : '';
     marker.bindPopup(`
-        <div style="font-family:'Courier New',monospace;font-size:11px;">
-            <div style="margin-bottom:6px;color:#aaa;">${chemin}</div>
-            ${lieuLine}
-            ${villeLine}
-            ${countLine}
-            ${p.date ? `<div style="color:#777;margin-top:2px;">${p.date}</div>` : ''}
+        <div class="popup-dossier">${chemin}</div>
+        ${lieuHTML}
+        ${villeHTML}
+        <div class="popup-footer">
+            ${countHTML}
+            ${p.date ? `<span class="popup-date">${p.date}</span>` : ''}
         </div>
-    `);
+    `, { className: 'popup-sd', maxWidth: 260 });
 }
 
 function openMapGallery(photos) {
