@@ -436,6 +436,13 @@ function updateTagCounts() {
         span.textContent = `(${count})`;
         btn.classList.toggle('tag-zero', count === 0);
     });
+
+    // Griser les titres de catégories dont tous les tags sont à zéro
+    document.querySelectorAll('.tag-category-block').forEach(block => {
+        const items = block.querySelectorAll('.tag-item:not(.active-tag)');
+        const allZero = items.length > 0 && [...items].every(i => i.classList.contains('tag-zero'));
+        block.querySelector('.tag-category-name')?.classList.toggle('tag-category-zero', allZero);
+    });
 }
 
 function updateTagsValidateBar() {
