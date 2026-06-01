@@ -60,7 +60,6 @@
                         <span id="page-info">1 / 1</span>
                         <button class="page-btn" id="btn-next">→</button>
                     </div>
-                    <button id="lightbox-back-btn" class="close-lightbox" onclick="closeLightbox(event)" style="display:none;">← RETOUR</button>
                 </div>
 
                 <div id="sd-content-grid" class="desktop-grid"></div>
@@ -141,6 +140,12 @@
             </div>
         </div>
     </section>
+
+    <!-- BARRE BREADCRUMB LIGHTBOX -->
+    <div id="lightbox-crumb-bar">
+        <div id="lightbox-crumb-path"></div>
+        <button id="lightbox-crumb-back" onclick="closeLightbox(event)">← RETOUR</button>
+    </div>
 
     <!-- LIGHTBOX -->
     <div id="lightbox" class="lightbox">
