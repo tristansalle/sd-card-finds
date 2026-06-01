@@ -689,6 +689,7 @@ nav {
     color: #777;
     padding: 0 10px 8px;
     letter-spacing: -0.01em;
+    white-space: nowrap;
 }
 .popup-footer {
     display: flex;

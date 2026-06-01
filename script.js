@@ -928,7 +928,7 @@ function refreshMarkerPopup(key) {
             ${countHTML}
             ${p.date ? `<span class="popup-date">${p.date}</span>` : ''}
         </div>
-    `, { className: 'popup-sd', maxWidth: 260 });
+    `, { className: 'popup-sd', maxWidth: 420 });
 }
 
 function openMapGallery(photos) {
