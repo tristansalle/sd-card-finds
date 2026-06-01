@@ -417,6 +417,7 @@ function updateTagCounts() {
             if (span) span.textContent = `(${tagCountBase[btn.dataset.tag] || 0})`;
             btn.classList.remove('tag-zero');
         });
+        document.querySelectorAll('.tag-category-name').forEach(t => t.classList.remove('tag-category-zero'));
         return;
     }
 
