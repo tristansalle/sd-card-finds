@@ -423,7 +423,7 @@ nav {
 /* ── LIGHTBOX ── */
 .lightbox {
     position: fixed;
-    top: var(--nav-height); left: 0; right: 0; bottom: 0;
+    top: calc(var(--nav-height) + var(--breadcrumb-height)); left: 0; right: 0; bottom: 0;
     background: var(--bg);
     z-index: 10000;
     display: none;
@@ -937,7 +937,7 @@ nav {
     #tags-back-btn { grid-column: 2; padding: 0 var(--space-2); white-space: nowrap; }
 
     /* Lightbox : stack vertical */
-    .lightbox { display: none; flex-direction: column; top: var(--nav-height); }
+    .lightbox { display: none; flex-direction: column; top: calc(var(--nav-height) + var(--breadcrumb-height)); }
     .lightbox.active { display: flex; }
     .lightbox-media { flex: 0 0 52vh; border-right: none; border-bottom: var(--hairline) solid var(--line); }
     .lightbox-sidebar { flex: 1; min-height: 0; border-left: none; overflow-y: auto; }
