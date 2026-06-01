@@ -727,13 +727,24 @@ function openLightbox(photo, photoList) {
     
     lightbox.classList.add('active');
 
-    // Masquer le breadcrumb index, afficher le bouton retour dans le breadcrumb
-    const bcText = document.getElementById('breadcrumb');
-    const bcBack = document.getElementById('lightbox-back-btn');
-    const bcPag  = document.getElementById('pagination-controls');
-    if (bcText) bcText.style.visibility = 'hidden';
-    if (bcPag && bcPag.style.display !== 'none') bcPag.style.visibility = 'hidden';
-    if (bcBack) bcBack.style.display = 'flex';
+    // Construire le fil d'ariane contextuel
+    const activeView = document.querySelector('.view-section.active')?.id;
+    let crumbParts = [];
+    if (activeView === 'carte' && (photo.ville || photo.lieu)) {
+        if (photo.ville) crumbParts.push(photo.ville);
+        if (photo.lieu)  crumbParts.push(photo.lieu);
+        crumbParts.push(photo.fichier || '');
+    } else {
+        const [carte, dossier] = (photo.dossier || '').split(' // ');
+        if (carte)   crumbParts.push(carte);
+        if (dossier) crumbParts.push(dossier);
+        crumbParts.push(photo.fichier || '');
+    }
+    const crumbHTML = crumbParts.map((p, i) =>
+        `<span class="crumb-part${i === crumbParts.length - 1 ? ' crumb-last' : ''}">${p}</span>${i < crumbParts.length - 1 ? '<span class="crumb-sep">//</span>' : ''}`
+    ).join('');
+    document.getElementById('lightbox-crumb-path').innerHTML = crumbHTML;
+    document.getElementById('lightbox-crumb-bar').classList.add('visible');
 
     if (img.style.display === 'block') {
         const applyFit = () => {
@@ -758,14 +769,7 @@ function closeLightbox(event) {
     audio.src = '';
     
     lightbox.classList.remove('active');
-
-    // Restaurer le breadcrumb index
-    const bcText = document.getElementById('breadcrumb');
-    const bcBack = document.getElementById('lightbox-back-btn');
-    const bcPag  = document.getElementById('pagination-controls');
-    if (bcText) bcText.style.visibility = '';
-    if (bcPag)  bcPag.style.visibility = '';
-    if (bcBack) bcBack.style.display = 'none';
+    document.getElementById('lightbox-crumb-bar').classList.remove('visible');
 }
 
 // ==========================================
