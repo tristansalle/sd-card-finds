@@ -916,7 +916,7 @@ function refreshMarkerPopup(key) {
     const [carteName, sousDossier] = (p.dossier || '').split(' // ');
     const chemin = sousDossier ? `${carteName} // ${sousDossier}` : (carteName || 'Inconnu');
     const countHTML = photos.length > 1
-        ? `<span class="popup-count-multi">↗ ${photos.length} photos</span>`
+        ? `<span class="popup-count-multi">${photos.length} fichiers</span>`
         : `<span class="popup-count-single">${p.fichier}</span>`;
     const lieuHTML  = p.lieu  ? `<div class="popup-lieu">${p.lieu}</div>` : `<div class="popup-lieu">—</div>`;
     const villeHTML = p.ville ? `<div class="popup-ville">${p.ville}</div>` : '';
