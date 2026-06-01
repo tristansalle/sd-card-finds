@@ -291,7 +291,7 @@ function renderPhotoGrid() {
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
             card.innerHTML = `<video src="${p.url}" poster="${p.thumb || ''}" muted preload="none"></video>`;
         } else {
-            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" decoding="async" onerror="this.src='${p.url}'">`;
+            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" decoding="async" onerror="if(this.src!=='${p.url}')this.src='${p.url}';else this.onerror=null;">`;
         }
 
         card.onclick = () => openLightbox(p, filteredPhotos);
@@ -496,7 +496,7 @@ function validateTagSelection() {
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
             card.innerHTML = `<video src="${p.url}" poster="${p.thumb || ''}" muted preload="none"></video>`;
         } else {
-            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async" onerror="this.src='${p.url}'">`;
+            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async" onerror="if(this.src!=='${p.url}')this.src='${p.url}';else this.onerror=null;">`;
         }
         card.onclick = () => openLightbox(p, filteredPhotos);
         frag.appendChild(card);
@@ -578,9 +578,15 @@ function displayTimeline() {
                 timelineObserver.observe(video);
             } else {
                 const img = document.createElement('img');
-                img.dataset.src = p.thumb || p.url; img.dataset.fallback = p.url; img.alt = ''; img.decoding = 'async'; img.onerror = function(){ this.src = this.dataset.fallback; };
+                img.src = p.thumb || p.url;
+                img.loading = 'lazy';
+                img.decoding = 'async';
+                img.alt = '';
+                img.onerror = function() {
+                    if (this.src !== p.url) { this.src = p.url; }
+                    else { this.onerror = null; }
+                };
                 cell.appendChild(img);
-                timelineObserver.observe(img);
             }
             cell.addEventListener('click', () => openLightbox(p, sorted));
             frag.appendChild(cell);
@@ -980,7 +986,7 @@ function openMapGallery(photos) {
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
             card.innerHTML = `<video src="${photo.url}" poster="${photo.thumb || ''}" muted preload="none"></video>`;
         } else {
-            card.innerHTML = `<img src="${photo.thumb || photo.url}" alt="${photo.fichier || ''}" loading="lazy" decoding="async" onerror="this.src='${photo.url}'">`;
+            card.innerHTML = `<img src="${photo.thumb || photo.url}" alt="${photo.fichier || ''}" loading="lazy" decoding="async" onerror="if(this.src!=='${photo.url}')this.src='${photo.url}';else this.onerror=null;">`;
         }
         card.onclick = () => openLightbox(photo, photos);
         frag.appendChild(card);
