@@ -466,20 +466,19 @@ nav {
     overflow: hidden;
     border-left: var(--hairline) solid var(--line);
 }
-.lightbox-sidebar-header {
-    height: var(--breadcrumb-height);
-    border-bottom: var(--hairline) solid var(--line);
-    display: grid; grid-template-columns: 1fr 1fr;
-    flex-shrink: 0;
-}
+.lightbox-sidebar-header { display: none; }
 .close-lightbox {
-    grid-column: 2 / 3;
     border: none; border-left: var(--hairline) solid var(--line);
     background: var(--text); color: var(--bg);
     font-size: 11px; font-weight: bold;
     text-transform: uppercase; letter-spacing: -0.02em;
     cursor: pointer; font-family: inherit;
     padding: 0;
+    height: var(--breadcrumb-height);
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
 }
 .close-lightbox:hover { background: var(--accent); }
 .lightbox-meta {
