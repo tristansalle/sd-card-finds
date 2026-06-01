@@ -740,9 +740,12 @@ function openLightbox(photo, photoList) {
         if (dossier) crumbParts.push(dossier);
         crumbParts.push(photo.fichier || '');
     }
-    const crumbHTML = crumbParts.map((p, i) =>
-        `<span class="${i === crumbParts.length - 1 ? 'breadcrumb-current' : 'breadcrumb-link'}">${p}</span>${i < crumbParts.length - 1 ? '<span style="margin:0 6px;color:var(--line)"> // </span>' : ''}`
-    ).join('');
+    const crumbHTML = crumbParts.map((p, i) => {
+        const isLast = i === crumbParts.length - 1;
+        const cls = isLast ? 'breadcrumb-current' : 'breadcrumb-link';
+        const label = i === 0 ? `[ ${p} ]` : `// ${p}`;
+        return `<span class="${cls}">${i > 0 ? '&nbsp;' : ''}${label}</span>`;
+    }).join('');
     document.getElementById('lightbox-crumb-path').innerHTML = crumbHTML;
     document.getElementById('lightbox-crumb-bar').classList.add('visible');
 
