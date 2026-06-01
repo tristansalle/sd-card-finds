@@ -524,7 +524,7 @@ nav {
     border: none; border-radius: 0;
     background: var(--bg); color: var(--text);
     font-size: 18px; font-weight: bold;
-    height: var(--breadcrumb-height);
+    height: calc(var(--unit-height) * 3);
     cursor: pointer; font-family: inherit;
     padding: 0;
 }
