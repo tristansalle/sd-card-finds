@@ -194,7 +194,7 @@ function displayIndex() {
                 const grid = document.getElementById('sd-content-grid');
                 const breadcrumb = document.getElementById('breadcrumb');
                 grid.innerHTML = '<div style="grid-column: 1/-1; padding: var(--space-4); text-align: center; font-family: \'Courier New\', monospace; color: var(--text-light);">[ AUCUNE DONNÉE DISPONIBLE ]</div>';
-                breadcrumb.textContent = `[ ${carteName} ]`;
+                breadcrumb.textContent = carteName;
                 document.getElementById('pagination-controls').style.display = 'none';
             }
         };
@@ -220,7 +220,7 @@ function displaySubfolders(carteName, subfolders) {
     
     // Breadcrumb cliquable
     breadcrumb.innerHTML = `
-        <span class="breadcrumb-current">[ ${carteName} ]</span>
+        <span class="breadcrumb-current">${carteName}</span>
     `;
     
     // Afficher les sous-dossiers
@@ -271,7 +271,7 @@ function displayPhotosGrid(photos, carteName, subfolder) {
     
     // Breadcrumb avec navigation
     breadcrumb.innerHTML = `
-        <span class="breadcrumb-link" onclick="backToCard('${carteName}')">[ ${carteName} ]</span>
+        <span class="breadcrumb-link" onclick="backToCard('${carteName}')">${carteName}</span>
         <span class="breadcrumb-current"> // ${subfolder}</span>
     `;
     
@@ -743,7 +743,7 @@ function openLightbox(photo, photoList) {
     const crumbHTML = crumbParts.map((p, i) => {
         const isLast = i === crumbParts.length - 1;
         const cls = isLast ? 'breadcrumb-current' : 'breadcrumb-link';
-        const label = i === 0 ? `[ ${p} ]` : `// ${p}`;
+        const label = i === 0 ? p : `// ${p}`;
         return `<span class="${cls}">${i > 0 ? '&nbsp;' : ''}${label}</span>`;
     }).join('');
     document.getElementById('lightbox-crumb-path').innerHTML = crumbHTML;
