@@ -60,8 +60,10 @@ async function loadData() {
     const years = allPhotos.map(p => p.date ? parseInt(p.date.slice(0,4)) : null).filter(Boolean);
     const minYear = Math.min(...years);
     const maxYear = Math.max(...years);
+    const pays = new Set(allPhotos.map(p => p.ville ? p.ville.trim().split(',').pop().trim() : null).filter(Boolean));
     document.getElementById('landing-stat-files').textContent = `${total.toLocaleString('fr-FR')} fichiers`;
     document.getElementById('landing-stat-years').textContent = `${minYear} — ${maxYear}`;
+    document.getElementById('landing-stat-pays').textContent = `${pays.size} pays`;
 
     // Cacher le loading screen, afficher la landing
     document.getElementById('loading-screen').style.display = 'none';
