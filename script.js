@@ -292,9 +292,8 @@ function renderPhotoGrid() {
         
         const ext = (p.url || '').toLowerCase();
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
-            card.innerHTML = `<video src="${p.url}" poster="${p.thumb || ''}" muted preload="none"></video>`;
-        } else {
-            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" decoding="async" onerror="if(this.src!=='${p.url}')this.src='${p.url}';else this.onerror=null;">`;
+            card.classList.add('video-card');
+            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async" onerror="if(this.src!=='${p.url}')this.src='${p.url}';else this.onerror=null;">`;
         }
 
         card.onclick = () => openLightbox(p, filteredPhotos);
@@ -497,8 +496,7 @@ function validateTagSelection() {
         card.className = 'photo-card';
         const ext = (p.url || '').toLowerCase();
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
-            card.innerHTML = `<video src="${p.url}" poster="${p.thumb || ''}" muted preload="none"></video>`;
-        } else {
+            card.classList.add('video-card');
             card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async" onerror="if(this.src!=='${p.url}')this.src='${p.url}';else this.onerror=null;">`;
         }
         card.onclick = () => openLightbox(p, filteredPhotos);
@@ -987,8 +985,7 @@ function openMapGallery(photos) {
         card.className = 'photo-card';
         const ext = (photo.url || '').toLowerCase();
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
-            card.innerHTML = `<video src="${photo.url}" poster="${photo.thumb || ''}" muted preload="none"></video>`;
-        } else {
+            card.classList.add('video-card');
             card.innerHTML = `<img src="${photo.thumb || photo.url}" alt="${photo.fichier || ''}" loading="lazy" decoding="async" onerror="if(this.src!=='${photo.url}')this.src='${photo.url}';else this.onerror=null;">`;
         }
         card.onclick = () => openLightbox(photo, photos);
