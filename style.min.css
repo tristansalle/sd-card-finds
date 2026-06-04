@@ -871,7 +871,8 @@ nav {
     color: var(--bg);
     border: none;
     height: calc(var(--unit-height) * 2);
-    padding: 0 32px;
+    width: calc(100vw / 6 - var(--space-6));
+    padding: 0;
     cursor: pointer;
     margin-top: var(--space-2);
 }
