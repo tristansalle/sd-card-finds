@@ -229,7 +229,8 @@ nav {
 }
 .photo-card:hover .photo-data { display: block; }
 
-.photo-card:has(video)::after {
+.photo-card:has(video)::after,
+.photo-card.video-card::after {
     content: '▶';
     position: absolute;
     top: 50%; left: 50%;
