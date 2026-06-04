@@ -870,7 +870,8 @@ nav {
     background: var(--text);
     color: var(--bg);
     border: none;
-    padding: 14px 32px;
+    height: calc(var(--unit-height) * 2);
+    padding: 0 32px;
     cursor: pointer;
     margin-top: var(--space-2);
 }
