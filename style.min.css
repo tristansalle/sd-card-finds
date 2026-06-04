@@ -832,7 +832,7 @@ nav {
 .landing-left {
     display: flex;
     align-items: flex-end;
-    gap: 10px;
+    gap: 15px;
 }
 .landing-card-img {
     height: clamp(110px, 24.2vw, 355px);
