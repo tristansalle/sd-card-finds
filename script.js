@@ -282,10 +282,8 @@ function renderPhotoGrid() {
         card.className = 'photo-card';
         
         const ext = (p.url || '').toLowerCase();
-        if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
-            card.classList.add('video-card');
-            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async" onerror="if(this.src!=='${p.url}')this.src='${p.url}';else this.onerror=null;">`;
-        }
+        if (ext.match(/\.(mp4|mov|avi|webm)$/)) card.classList.add('video-card');
+        card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async" onerror="if(this.src!=='${p.url}')this.src='${p.url}';else this.onerror=null;">`;
 
         card.onclick = () => openLightbox(p, filteredPhotos);
         grid.appendChild(card);
@@ -486,10 +484,8 @@ function validateTagSelection() {
         const card = document.createElement('div');
         card.className = 'photo-card';
         const ext = (p.url || '').toLowerCase();
-        if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
-            card.classList.add('video-card');
-            card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async" onerror="if(this.src!=='${p.url}')this.src='${p.url}';else this.onerror=null;">`;
-        }
+        if (ext.match(/\.(mp4|mov|avi|webm)$/)) card.classList.add('video-card');
+        card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async" onerror="if(this.src!=='${p.url}')this.src='${p.url}';else this.onerror=null;">`;
         card.onclick = () => openLightbox(p, filteredPhotos);
         frag.appendChild(card);
     });
@@ -975,10 +971,8 @@ function openMapGallery(photos) {
         const card = document.createElement('div');
         card.className = 'photo-card';
         const ext = (photo.url || '').toLowerCase();
-        if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
-            card.classList.add('video-card');
-            card.innerHTML = `<img src="${photo.thumb || photo.url}" alt="${photo.fichier || ''}" loading="lazy" decoding="async" onerror="if(this.src!=='${photo.url}')this.src='${photo.url}';else this.onerror=null;">`;
-        }
+        if (ext.match(/\.(mp4|mov|avi|webm)$/)) card.classList.add('video-card');
+        card.innerHTML = `<img src="${photo.thumb || photo.url}" alt="${photo.fichier || ''}" loading="lazy" decoding="async" onerror="if(this.src!=='${photo.url}')this.src='${photo.url}';else this.onerror=null;">`;
         card.onclick = () => openLightbox(photo, photos);
         frag.appendChild(card);
     });
