@@ -2,7 +2,7 @@
 // 1. VARIABLES GLOBALES
 // ==========================================
 const IMAGE_BASE = 'https://assets.sdcardsfinds.com';
-const THUMB_BASE = '/thumbs';
+const THUMB_BASE = 'https://assets.sdcardsfinds.com/thumbs';
 let allPhotos = [];
 let filteredPhotos = [];
 let currentPage = 1;
