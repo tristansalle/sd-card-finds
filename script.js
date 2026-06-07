@@ -135,6 +135,7 @@ const cardSizes = {
     'CARTE_14': '3,89 Go',
     'CARTE_09': '219,7 Mo',
     'CARTE_13': '490 Ko',
+    'CARTE_15': '2,13 Go',
     'CARTE_16': '9,6 Mo',
     'CARTE_17': '278 Mo',
     'CARTE_18': '176,2 Mo'
