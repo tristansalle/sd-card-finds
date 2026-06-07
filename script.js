@@ -229,7 +229,7 @@ function displaySubfolders(carteName, subfolders) {
 
         const photoIcon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>`;
         const videoIcon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m460-380 280-180-280-180v360ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>`;
-        const audioIcon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M430-200q38 0 64-26t26-64v-150h120v-80H480v155q-11-8-23.5-11.5T430-380q-38 0-64 26t-26 64q0 38 26 64t64 26ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>`;
+        const audioIcon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M500-360q42 0 71-29t29-71v-220h120v-80H560v220q-13-10-28-15t-32-5q-42 0-71 29t-29 71q0 42 29 71t71 29ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>`;
         const mixedIcon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"/></svg>`;
 
         const icon = type === 'video' ? videoIcon : type === 'photo' ? photoIcon : type === 'audio' ? audioIcon : mixedIcon;
@@ -290,6 +290,13 @@ function renderPhotoGrid() {
         
         const ext = (p.url || '').toLowerCase();
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) card.classList.add('video-card');
+        else if (ext.match(/\.(mp3|wav|aac|flac|ogg|m4a)$/)) {
+            card.classList.add('audio-card');
+            card.innerHTML = `<div class="audio-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"><path d="M430-200q38 0 64-26t26-64v-150h120v-80H480v155q-11-8-23.5-11.5T430-380q-38 0-64 26t-26 64q0 38 26 64t64 26ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg></div>`;
+            card.onclick = () => openLightbox(p, filteredPhotos);
+            grid.appendChild(card);
+            return;
+        }
         card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async" onerror="if(this.src!=='${p.url}')this.src='${p.url}';else this.onerror=null;">`;
 
         card.onclick = () => openLightbox(p, filteredPhotos);
@@ -492,6 +499,13 @@ function validateTagSelection() {
         card.className = 'photo-card';
         const ext = (p.url || '').toLowerCase();
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) card.classList.add('video-card');
+        else if (ext.match(/\.(mp3|wav|aac|flac|ogg|m4a)$/)) {
+            card.classList.add('audio-card');
+            card.innerHTML = `<div class="audio-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"><path d="M430-200q38 0 64-26t26-64v-150h120v-80H480v155q-11-8-23.5-11.5T430-380q-38 0-64 26t-26 64q0 38 26 64t64 26ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg></div>`;
+            card.onclick = () => openLightbox(p, filteredPhotos);
+            frag.appendChild(card);
+            return;
+        }
         card.innerHTML = `<img src="${p.thumb || p.url}" alt="${p.fichier || ''}" loading="lazy" decoding="async" onerror="if(this.src!=='${p.url}')this.src='${p.url}';else this.onerror=null;">`;
         card.onclick = () => openLightbox(p, filteredPhotos);
         frag.appendChild(card);
@@ -979,6 +993,13 @@ function openMapGallery(photos) {
         card.className = 'photo-card';
         const ext = (photo.url || '').toLowerCase();
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) card.classList.add('video-card');
+        else if (ext.match(/\.(mp3|wav|aac|flac|ogg|m4a)$/)) {
+            card.classList.add('audio-card');
+            card.innerHTML = `<div class="audio-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"><path d="M430-200q38 0 64-26t26-64v-150h120v-80H480v155q-11-8-23.5-11.5T430-380q-38 0-64 26t-26 64q0 38 26 64t64 26ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg></div>`;
+            card.onclick = () => openLightbox(photo, photos);
+            frag.appendChild(card);
+            return;
+        }
         card.innerHTML = `<img src="${photo.thumb || photo.url}" alt="${photo.fichier || ''}" loading="lazy" decoding="async" onerror="if(this.src!=='${photo.url}')this.src='${photo.url}';else this.onerror=null;">`;
         card.onclick = () => openLightbox(photo, photos);
         frag.appendChild(card);
