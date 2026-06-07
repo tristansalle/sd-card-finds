@@ -224,26 +224,15 @@ function displaySubfolders(carteName, subfolders) {
         const count = subfolders[subfolder].length;
         const isVideo = subfolders[subfolder].some(p => /\.(mp4|mov|avi|webm)$/i.test(p.fichier || ''));
         const isPhoto = subfolders[subfolder].some(p => /\.(jpg|jpeg|png|gif|webp|tiff?)$/i.test(p.fichier || ''));
-        const type = isVideo && !isPhoto ? 'video' : isPhoto && !isVideo ? 'photo' : 'mixed';
+        const isAudio = subfolders[subfolder].some(p => /\.(mp3|wav|aac|flac|ogg|m4a)$/i.test(p.fichier || ''));
+        const type = isVideo && !isPhoto && !isAudio ? 'video' : isPhoto && !isVideo && !isAudio ? 'photo' : isAudio && !isPhoto && !isVideo ? 'audio' : 'mixed';
 
-        const photoIcon = `<svg width="36" height="28" viewBox="0 0 36 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round">
-            <rect x="1" y="5" width="34" height="22" rx="1"/>
-            <circle cx="18" cy="16" r="6"/>
-            <rect x="13" y="2" width="10" height="4" rx="1"/>
-        </svg>`;
+        const photoIcon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>`;
+        const videoIcon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m460-380 280-180-280-180v360ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>`;
+        const audioIcon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M430-200q38 0 64-26t26-64v-150h120v-80H480v155q-11-8-23.5-11.5T430-380q-38 0-64 26t-26 64q0 38 26 64t64 26ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>`;
+        const mixedIcon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"/></svg>`;
 
-        const videoIcon = `<svg width="36" height="28" viewBox="0 0 36 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round">
-            <rect x="1" y="5" width="34" height="22" rx="1"/>
-            <polygon points="14,11 14,22 26,16.5" stroke="none" fill="currentColor" opacity="0.4"/>
-            <polygon points="14,11 14,22 26,16.5"/>
-        </svg>`;
-
-        const mixedIcon = `<svg width="36" height="28" viewBox="0 0 36 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round">
-            <path d="M1 8 H35 V26 Q35 27 34 27 H2 Q1 27 1 26 V8 Z"/>
-            <path d="M1 8 V6 Q1 5 2 5 H14 L16 8"/>
-        </svg>`;
-
-        const icon = type === 'video' ? videoIcon : type === 'photo' ? photoIcon : mixedIcon;
+        const icon = type === 'video' ? videoIcon : type === 'photo' ? photoIcon : type === 'audio' ? audioIcon : mixedIcon;
 
         folder.innerHTML = `
             <div class="sub-folder-icon">${icon}</div>
