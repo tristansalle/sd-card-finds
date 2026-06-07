@@ -717,7 +717,7 @@ function openLightbox(photo, photoList) {
     if (ext.match(/\.(mp4|mov|avi|webm)$/)) {
         video.src = photo.url;
         video.style.display = 'block';
-    } else if (ext.match(/\.(mp3|wav|ogg)$/)) {
+    } else if (ext.match(/\.(mp3|wav|ogg|aac|flac|m4a)$/)) {
         audio.src = photo.url;
         audioContainer.style.display = 'flex';
     } else {

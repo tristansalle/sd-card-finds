@@ -62,7 +62,7 @@ nav {
     text-transform: uppercase; letter-spacing: -0.02em;
     white-space: nowrap;
 }
-.nav-btn:first-child { }
+
 .nav-btn:hover { background: #fafafa; color: var(--accent); }
 .nav-btn.active-nav { background: var(--bg); color: var(--accent); box-shadow: none; }
 .nav-btn.active-nav:hover { background: var(--bg); color: var(--accent); }
@@ -238,9 +238,10 @@ nav {
 .audio-card-icon {
     position: absolute; top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 40px; height: 40px;
-    opacity: 0.25;
+    width: 20px; height: 20px;
+    opacity: 0.5;
     pointer-events: none;
+    color: var(--text);
 }
 .audio-card-icon svg { width: 100%; height: 100%; }
 
@@ -453,8 +454,13 @@ nav {
 }
 .lightbox-audio-container {
     display: none;
-    flex-direction: column; align-items: center;
-    padding: var(--space-4);
+    flex-direction: column; align-items: center; justify-content: center;
+    width: 100%; height: 100%;
+    gap: var(--space-3);
+}
+.lightbox-audio-container audio {
+    width: 80%;
+    max-width: 400px;
 }
 
 .lightbox-sidebar {
