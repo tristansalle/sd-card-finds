@@ -70,7 +70,7 @@ function startLandingCarousel() {
         let pick;
         do { pick = cards[Math.floor(Math.random() * cards.length)]; } while (pick === last);
         last = pick;
-        img.src = `images/cartes_sd/CARTE_${pick}.png`;
+        img.src = `cartes_sd/CARTE_${pick}.png`;
     }, 500);
 }
 
@@ -154,7 +154,7 @@ function displayIndex() {
         const carteName = `CARTE_${num}`; // CARTE_01, CARTE_02, etc. (2 chiffres)
         
         // Image de la carte SD elle-même
-        const cardImgUrl = `images/cartes_sd/CARTE_${num}.png`;
+        const cardImgUrl = `cartes_sd/CARTE_${num}.png`;
         
         const item = document.createElement('div');
         item.className = 'sidebar-item';
