@@ -222,13 +222,31 @@ function displaySubfolders(carteName, subfolders) {
         const folder = document.createElement('div');
         folder.className = 'sub-folder';
         const count = subfolders[subfolder].length;
+        const isVideo = subfolders[subfolder].some(p => /\.(mp4|mov|avi|webm)$/i.test(p.fichier || ''));
+        const isPhoto = subfolders[subfolder].some(p => /\.(jpg|jpeg|png|gif|webp|tiff?)$/i.test(p.fichier || ''));
+        const type = isVideo && !isPhoto ? 'video' : isPhoto && !isVideo ? 'photo' : 'mixed';
+
+        const photoIcon = `<svg width="36" height="28" viewBox="0 0 36 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round">
+            <rect x="1" y="5" width="34" height="22" rx="1"/>
+            <circle cx="18" cy="16" r="6"/>
+            <rect x="13" y="2" width="10" height="4" rx="1"/>
+        </svg>`;
+
+        const videoIcon = `<svg width="36" height="28" viewBox="0 0 36 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round">
+            <rect x="1" y="5" width="34" height="22" rx="1"/>
+            <polygon points="14,11 14,22 26,16.5" stroke="none" fill="currentColor" opacity="0.4"/>
+            <polygon points="14,11 14,22 26,16.5"/>
+        </svg>`;
+
+        const mixedIcon = `<svg width="36" height="28" viewBox="0 0 36 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round">
+            <path d="M1 8 H35 V26 Q35 27 34 27 H2 Q1 27 1 26 V8 Z"/>
+            <path d="M1 8 V6 Q1 5 2 5 H14 L16 8"/>
+        </svg>`;
+
+        const icon = type === 'video' ? videoIcon : type === 'photo' ? photoIcon : mixedIcon;
+
         folder.innerHTML = `
-            <div class="sub-folder-icon">
-                <svg width="36" height="28" viewBox="0 0 36 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round">
-                    <path d="M1 8 H35 V26 Q35 27 34 27 H2 Q1 27 1 26 V8 Z"/>
-                    <path d="M1 8 V6 Q1 5 2 5 H14 L16 8"/>
-                </svg>
-            </div>
+            <div class="sub-folder-icon">${icon}</div>
             <div class="sd-id">${subfolder || '(sans nom)'}</div>
             <div class="sub-folder-count">${count} fichier${count > 1 ? 's' : ''}</div>
         `;
