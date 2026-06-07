@@ -21,17 +21,7 @@ let timelineYearIndex = -1;
 // 2. CHARGEMENT DES JSON
 // ==========================================
 async function loadData() {
-    const promises = [];
-    for (let i = 1; i <= 18; i++) {
-        const num = String(i).padStart(2, '0');
-        promises.push(
-            fetch(`data_carte_${num}.json`)
-                .then(res => res.json())
-                .catch(() => [])
-        );
-    }
-    const results = await Promise.all(promises);
-    allPhotos = results.flat();
+    allPhotos = await fetch('data_all.json').then(res => res.json()).catch(() => []);
     
     // Reconstruire les URLs à partir de dossier + fichier
     allPhotos = allPhotos.map(p => {

@@ -6,3 +6,6 @@
 
 /*.html
   Cache-Control: no-cache, must-revalidate
+
+/data_all.json
+  Cache-Control: public, max-age=3600
