@@ -118,6 +118,7 @@ function showView(viewName, btnElement) {
 const cardSizes = {
     'CARTE_01': '864 Mo',
     'CARTE_03': '45 Mo',
+    'CARTE_04': '4,18 Go',
     'CARTE_05': '13 Go',
     'CARTE_06': '2,2 Go',
     'CARTE_08': '2,4 Go',
