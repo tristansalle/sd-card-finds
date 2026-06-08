@@ -32,7 +32,7 @@ async function loadData() {
                 p.url = `${IMAGE_BASE}/images/carte_${carteNum}/${subfolder}/${p.fichier}`;
                 const isVideo = /\.(mp4|mov|avi|webm)$/i.test(p.fichier);
                 const thumbFile = p.fichier.replace(/\.[^.]+$/, isVideo ? '.jpg' : m => m.toLowerCase());
-                p.thumb = `${THUMB_BASE}/carte_${carteNum}/${subfolder}/${thumbFile}`;
+                p.thumb = `${THUMB_BASE}/carte_${carteNum}/${subfolder}/${thumbFile}?v=2`;
             }
         }
         return p;
