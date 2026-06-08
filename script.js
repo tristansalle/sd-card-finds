@@ -293,7 +293,7 @@ function renderPhotoGrid() {
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) card.classList.add('video-card');
         else if (ext.match(/\.(mp3|wav|aac|flac|ogg|m4a)$/)) {
             card.classList.add('audio-card');
-            card.innerHTML = `<img src="/icones/audio_placeholder.jpg" alt="${p.fichier || ''}" loading="lazy">`;
+            card.innerHTML = `<img src="/icones/audio_placeholder.png" alt="${p.fichier || ''}" loading="lazy">`;
             card.onclick = () => openLightbox(p, filteredPhotos);
             grid.appendChild(card);
             return;
@@ -502,7 +502,7 @@ function validateTagSelection() {
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) card.classList.add('video-card');
         else if (ext.match(/\.(mp3|wav|aac|flac|ogg|m4a)$/)) {
             card.classList.add('audio-card');
-            card.innerHTML = `<img src="/icones/audio_placeholder.jpg" alt="${p.fichier || ''}" loading="lazy">`;
+            card.innerHTML = `<img src="/icones/audio_placeholder.png" alt="${p.fichier || ''}" loading="lazy">`;
             card.onclick = () => openLightbox(p, filteredPhotos);
             frag.appendChild(card);
             return;
@@ -996,7 +996,7 @@ function openMapGallery(photos) {
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) card.classList.add('video-card');
         else if (ext.match(/\.(mp3|wav|aac|flac|ogg|m4a)$/)) {
             card.classList.add('audio-card');
-            card.innerHTML = `<img src="/icones/audio_placeholder.jpg" alt="${p.fichier || ''}" loading="lazy">`;
+            card.innerHTML = `<img src="/icones/audio_placeholder.png" alt="${p.fichier || ''}" loading="lazy">`;
             card.onclick = () => openLightbox(photo, photos);
             frag.appendChild(card);
             return;
