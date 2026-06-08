@@ -586,6 +586,12 @@ function displayTimeline() {
                 video.dataset.src = p.url; video.poster = p.thumb || ''; video.muted = true; video.preload = 'none';
                 cell.appendChild(video);
                 timelineObserver.observe(video);
+            } else if (ext.match(/\.(mp3|wav|aac|flac|ogg|m4a)$/)) {
+                const img = document.createElement('img');
+                img.src = '/icones/audio_placeholder.png';
+                img.loading = 'lazy';
+                img.alt = '';
+                cell.appendChild(img);
             } else {
                 const img = document.createElement('img');
                 img.src = p.thumb || p.url;
