@@ -293,7 +293,7 @@ function renderPhotoGrid() {
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) card.classList.add('video-card');
         else if (ext.match(/\.(mp3|wav|aac|flac|ogg|m4a)$/)) {
             card.classList.add('audio-card');
-            card.innerHTML = `<div class="audio-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 -960 960 960" fill="currentColor"><path d="M430-200q38 0 64-26t26-64v-150h120v-80H480v155q-11-8-23.5-11.5T430-380q-38 0-64 26t-26 64q0 38 26 64t64 26ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg></div>`;
+            card.innerHTML = `<div class="audio-card-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 -960 960 960" fill="currentColor"><path d="M430-200q38 0 64-26t26-64v-150h120v-80H480v155q-11-8-23.5-11.5T430-380q-38 0-64 26t-26 64q0 38 26 64t64 26ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg><span>${p.fichier || ''}</span></div>`;
             card.onclick = () => openLightbox(p, filteredPhotos);
             grid.appendChild(card);
             return;
@@ -502,7 +502,7 @@ function validateTagSelection() {
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) card.classList.add('video-card');
         else if (ext.match(/\.(mp3|wav|aac|flac|ogg|m4a)$/)) {
             card.classList.add('audio-card');
-            card.innerHTML = `<div class="audio-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 -960 960 960" fill="currentColor"><path d="M430-200q38 0 64-26t26-64v-150h120v-80H480v155q-11-8-23.5-11.5T430-380q-38 0-64 26t-26 64q0 38 26 64t64 26ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg></div>`;
+            card.innerHTML = `<div class="audio-card-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 -960 960 960" fill="currentColor"><path d="M430-200q38 0 64-26t26-64v-150h120v-80H480v155q-11-8-23.5-11.5T430-380q-38 0-64 26t-26 64q0 38 26 64t64 26ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg><span>${p.fichier || ''}</span></div>`;
             card.onclick = () => openLightbox(p, filteredPhotos);
             frag.appendChild(card);
             return;
@@ -996,7 +996,7 @@ function openMapGallery(photos) {
         if (ext.match(/\.(mp4|mov|avi|webm)$/)) card.classList.add('video-card');
         else if (ext.match(/\.(mp3|wav|aac|flac|ogg|m4a)$/)) {
             card.classList.add('audio-card');
-            card.innerHTML = `<div class="audio-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 -960 960 960" fill="currentColor"><path d="M430-200q38 0 64-26t26-64v-150h120v-80H480v155q-11-8-23.5-11.5T430-380q-38 0-64 26t-26 64q0 38 26 64t64 26ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg></div>`;
+            card.innerHTML = `<div class="audio-card-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 -960 960 960" fill="currentColor"><path d="M430-200q38 0 64-26t26-64v-150h120v-80H480v155q-11-8-23.5-11.5T430-380q-38 0-64 26t-26 64q0 38 26 64t64 26ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg><span>${p.fichier || ''}</span></div>`;
             card.onclick = () => openLightbox(photo, photos);
             frag.appendChild(card);
             return;
